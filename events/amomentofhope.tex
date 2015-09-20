@@ -112,3 +112,200 @@
 
     Jeder Entdecker rollt bei jedem Charakterwurf (Might, ...) in diesem Raum mit einem Würfel weniger.
 }
+
+\event{Footsteps}{Fußabdrücke}{
+    Die Dielen knarren leise. Staub steigt auf. Fußabdrücke erscheinen auf dem schmutzigen Boden. Als sie dich schließlich erreichen, sind sie plötzlich fort.
+}{
+    Würfle mit einem Würfel. (Befindest du dich in der Kapelle, würfle mit 2 Würfeln.)
+
+    \rolls
+    \roll{4}{Du und der nächstgelegene Entdecker erhalten 1 \might.}
+    \roll{3}{Du erhälst 1 \might\ und der nächstgelegene Entdecker verliert 1 \sanity.}
+    \roll{2}{Nehme 1 \sanity\ Schaden.}
+    \roll{1}{Nehme 1 \speed\ Schaden.}
+    \roll{0}{Jeder Entdecker verliert eine Stufe einer Charaktereigenschaft (Might, ...) seiner Wahl.}
+    \erolls
+}
+
+\event{Funeral}{Beerdigung}{
+    Du siehst einen offenen Sarg. Von innen.
+}{
+    Du musst einen \sanityroll versuchen:
+    \rolls
+    \roll{4+}{Du blinzelst und er ist verschwunden. Erhalte 1 \sanity.}
+    \roll{2-3}{Die Vision verstört dich. Verliere 1 \sanity.}
+    \roll{0-1}{Du befindest dich wirklich in dem Sarg. Du nimmst 1 \sanity\ und 1 \might\ Schaden, als du dich herausschiebst. Wenn der Friedhof (Graveyard) oder die Crypta (Crypt) entdeckt wurden, versetze deine Figur in einen dieser Räume. (Du wählst aus.)}
+    \erolls
+}
+
+\event{Grave Dirt}{Grabesschmutz}{
+    Dieser Raum ist unter einer dicken Schicht Dreck begraben. Du hustest, als sich der Staub auf deiner Haut und in deinen Lungen absetzt.
+}{
+    Versuche einen \mightroll:
+    \rolls
+    \roll{4+}{Du schüttelst den Staub ab. Erhalte 1 \might}
+    \roll{0-3}{Irgendwas stimmt nicht. Behalte diese Karte. Nehme 1 phsyischen Schaden am Anfang jeder deiner Runden. Lege diese Karte aus dem Spiel, sobald einer deiner Charakterwerte steigt oder wenn du einen Zug auf dem Balkon, im Garten, auf dem Friedhof, in der Turnhalle, im Lagerrraum, auf der Veranda oder auf dem Turm beendest. (Balcony, Gardens, Graveyard, Gymnasium, Larder, Patio or Tower)}
+    \erolls
+}
+
+\event{Groundkeeper}{Hausmeister}{
+    Du drehst dich um und siehst einen Mann in Gärtnerkleidung. Er hebt seine Schaufel und greift an. Zentimeter vor deinem Gesicht verschwindet er, einzig matschige Fußabdrücke hinterlassend.
+}{
+    Versuche einen \knowroll. (Ein Entdecker im Garten verzichtet auf zwei seiner Würfel).
+
+    \rolls
+    \roll{4+}{Du findest etwas im Schlamm. Ziehe eine \itemcardd.}
+    \roll{0-3}{Der Hausmeister erscheint wieder und schlägt dir die Schaufel ins Gesicht. Der Spieler zu deiner Rechten wirft einen \mightroll\ mit 4 Würfeln für den Hausmeister. Du verteidigst dich normal, indem du einen \mightroll\ ausführst. }
+    \erolls
+}
+
+
+\event{Hanged Men}{Die Erhängten}{
+    Ein Hauch kühler Luft fährt durch den Raum. Vor dir hängen drei Männer an ausgefransten Seilen. Sie starren dich mit kalten, toten Augen an. Das Trio pendelt sanft im Wind und verschwindet hinter dem Vorhang aus Staub, der von der Decke herabrieselt. Du fängst an zu husten.
+}{
+    Du musst einen Wurf für jede Charaktereigenschaft (Might, ...) werfen:
+    \rolls
+    \roll{2+}{Der entsprechende Wert bleibt unbeeinflusst.}
+    \roll{0-1}{Du verlierst 1 Stufe der entsprechenden Eigenschaft.}
+    \erolls
+
+    Wenn du bei allen Würfen 2+ wirfst, erhälst du einen zusätzlichen Punkt zu einem Charakterwert deiner Wahl.
+}
+
+
+\event{Hideous Shriek}{Scheußliches Kreischen}{
+    Es beginnt mit einem Flüstern, aber endet in einem seelenzerreißenden Schrei.
+}{
+    Jeder Entdecker muss einen \sanityroll\ versuchen:
+
+    \rolls
+    \roll{4+}{Du widerstehst dem Geräusch.}
+    \roll{1-3}{Nehme 1 \emph{Würfel} mentalen Schaden.}
+    \roll{0}{Nehme 2 \emph{Würfel} mentalen Schaden.}
+    \erolls
+
+    Jedes Ergebnis betrifft nur den Entdecker, der den jeweiligen Wurf warf.
+}
+
+\event{Image In The Mirror}{Bild im Spiegel}{
+    (Version ohne fettgedruckten Einleitungstext.)
+}{
+    Es befindet sich ein alter Spiegel im Zimmer. Deine erschrockene Reflektion bewegt sich von alleine. Du erkennst dich, aber in einer anderen Zeit. Deine Reflektion schreibt auf den Spiegel:
+    \vspace{\parsep}
+    \begin{tightcenter}\begin{bf}DAS WIRD HELFEN\end{bf}\end{tightcenter}
+    Dann reicht sie dir einen Gegenstand durch den Spiegel.
+
+    Ziehe eine \itemcardd.
+}
+
+\event{Image In The Mirror}{Bild im Spiegel}{
+    Wenn du keine \itemcards\ besitzt, gilt dieser Effekt für den nächsten Entdecker zu deiner Linken, der eine \itemcardd\ besitzt. Lege diese Karte aus dem Spiel, wenn niemand eine \itemcardd\ besitzt.
+}{
+    Es befindet sich ein alter Spiegel im Zimmer. Deine erschrockene Reflektion bewegt sich von alleine. Du erkennst dich, aber in einer anderen Zeit. Du musst deiner Reflektion helfen, also schreibst du auf den Spiegel:
+    \vspace{\parsep}
+    \begin{tightcenter}\begin{bf}DAS WIRD HELFEN\end{bf}\end{tightcenter}
+    Dann reiche einen Gegenstand durch den Spiegel.
+
+    Wähle eine deiner Gegenstandskarten (aber keine \omencard) und lege sie auf das Itemdeck. Dann mische das Deck. Erhalte 1 \know.
+}
+
+\event{It Is Meant to be}{So soll es sein}{
+    Du brichst auf dem Boden zusammen, Visionen zukünftiger Ereignisse fließen durch deine Gedanken.
+}{
+    Wähle eine dieser beiden Optionen:
+    \rolls
+    \roll{$\bullet$}{Schaue dir die drei obersten Karten einer der vier Decks an, vertausche sie nach Wahl und lege sie zurück auf den Kartenstapel. Verrate niemandem dein Wissen.}
+    \roll{$\bullet$}{Du kannst stattdessen auch mit vier Würfeln werfen und das Ergebnis aufschreiben. Bei irgendeinem zukünftigen Wurf kannst du dieses Ergebnis verwenden anstatt zu würfeln. Wenn diese Zahl größer als das maximal mögliche Ergebnis ist, verwende das höchstmögliche Ergebnis.}
+    \erolls
+}
+
+
+\event{Jonah's Turn}{Jonah's Zug}{
+    Zwei Jungen spielen mit einem hölzernen Kreisel. ``Willst du auch mal drehen, Jonah?'' fragt einer.
+
+    ``Nein'', sagt Jonah, ``Ich will ihn ganz.'' Jonah nimmt den Kreisel und schlägt dem anderen Jungen ins Gesicht. Der Junge fällt. Jonah schlägt  ihn noch, als der Anblick schwindet.
+}{
+    Wenn ein Entdecker die Rätsel-Schachtel (Puzzle Box) hat, legt dieser sie aus dem Spiel und zieht stattdessen eine Ersatz-\itemcardd. Wenn dies passiert, erhälst du 1 \sanity. Andernfalls erhälst du einen \emph{Würfel} mentalen Schaden.
+}
+
+\event{Lights Out}{Lichter aus}{
+    Deine Taschenlampe erlischt. Keine Sorge, jemand anderes hat Batterien.
+}{
+    Behalte diese Karte. Du kannst pro Zug nur ein Feld laufen bis du deinen Zug bei einem der anderern Entdecker beendest. Lege diese Karte danach aus dem Spiel. Du kannst du nun wieder normal laufen.
+
+    Wenn du die Kerze besitzt oder deinen Zug im Ofenraum (Furnace Room) beendest, lege sie ebenfalls beiseite.
+}
+
+\event{Locked Safe}{Verschlossener Safe}{
+    Hinter einem Portrait befindet sich ein Wandsafe. Natürlich verklemmt.
+}{
+    Lege einen Safe-Chip in den Raum.
+
+    Einmal pro Runde kann ein Entdecker den Safe mithilfe eines \knowroll\ öffnen:
+
+    \rolls
+    \roll{5+}{Ziehe zwei \itemcards und entferne den Safe-Chip.}
+    \roll{2-4}{Nehme einen Würfel physischen Schaden. Der Safe bleibt verschlossen.}
+    \roll{0-1}{Nehme zwei Würfel physischen Schaden. Der Safe bleibt verschlossen.}
+    \erolls
+}
+
+\event{Mists From The Walls}{Nebel aus den Wänden}{
+    Nebel fließt aus den Wänden heraus. Man erkennt Gesichter in dem Dunst, menschliche und ... unmenschliche.
+}{
+    Jeder Entdecker im Keller (Basement) muss einen \sanityroll\ versuchen:
+
+    \rolls
+    \roll{4+}{Die Gesichter sind nur Einbildungen in Licht und Schatten. Alles ist gut.}
+    \roll{1-3}{Nehme einen Würfel mentalen Schaden. (Nehme einen Würfel zusätzlichen Schaden, wenn sich dein Entdecker in einem Raum mit einem Ereignissymbol befindet.)}
+    \roll{0}{Nehme einen Würfel mentalen schaden. (Nehme zwei Würfel zusätzlichen Schaden, wenn sich dein Entdecker in einem Raum mit einem Ereignissymbol befindet.)}
+    \erolls
+}
+
+\event{Mystic Slide}{Mystische Rutsche}{
+    Bist du im Keller (Basement), betrifft dieses Event den nächsten Entdecker zu deiner Linken, der sich nicht im Keller aufhält. Lege diese Karte aus dem Spiel, wenn alle Entdecker im Keller sind.
+
+    Der Boden fällt unter dir ab.
+}{
+    Setze den Slide-Chip (Rutsche) in diesen Raum, dann versuche einen \mightroll\ um zu rutschen.
+
+    \rolls
+    \roll{5+}{Du kontrollierst die Rutsche. Versetze deine Figur in einen Raum deiner Wahl in irgendeinem Stock unterhalb des Ausgangsstockwerks.}
+    \roll{0-4}{Ziehe Zimmerkarten bis du eine Kellerkarte ziehst. Plaziere die Karte. (Wenn keine Kellerräume mehr auf dem Stapel liegen, nehme einen bereits existierenden Kellerraum.) Du fällst in diesen Raum und nimmst einen Würfel physischen Schaden. Wenn du nicht an der Reihe bist, ziehe keine Karte für diesen Raum.}
+    \erolls
+
+    Ab jetzt kann jeder Entdecker versuchen, zu rutschen.
+}
+
+
+\event{Night View}{Nächtliche Aussicht}{
+    Du siehst die Vision eines geisterhaften Pärchens über das Gelände laufen, leise wandelnd in ihrer Hochzeitsgaderobe.
+}{
+    Du musst einen \knowroll\ versuchen:
+    \rolls
+    \roll{5+}{Du erkennst die Geister als frühere Bewohner des Hauses. Du rufst ihre Namen, sie drehen sich zu dir um, dunkle Geheimnisse des Hauses flüsternd. Erhalte 1 \know.}
+    \roll{0-4}{Du fährst erschrocken zurück, unfähig zuzusehen.}
+    \erolls
+}
+
+\event{Phone Call}{Anruf}{
+    Ein Telefon klingelt im Zimmer. Du fühlst dich verpflichtet abzunehmen.
+}{
+    Würfle mit zwei Würfeln. Die zuckersüße Stimme einer alten Frau Sagt:
+    \rolls
+    \roll{4}{``Tee und Kuchen! Tee und Kuchen! Du warst immer mein Liebster.'' Erhalte 1 \sanity.}
+    \roll{3}{``Ich war immer für dich da, mein Süßer. Beobachten ...'' Erhalte 1 \know.}
+    \roll{1-2}{``Ich bin hier, mein Honigküchlein! Gib uns einen Kuss!'' Nehme einen Würfel mentalen Schaden.}
+    \roll{0}{``Böse kleine Kinder müssen bestraft werden!'' Nehme zwei Würfel physischen Schaden.}
+    \erolls
+}
+
+\event{Possession}{Besessenheit}{
+    Ein Schatten schält sich aus der Wand. Du verharrst starr, als der Schatten dich umrundet und dich bis ins Mark auskühlt.
+}{
+    Du musst eine Charaktereigenschaft auswählen und für diese einen Wurf versuchen:
+    \rolls
+    \roll{4+}{Du widerstehst den Verlockungen des Schattens. Erhalte 1 in einem Charakterwert deiner Wahl.}
+    \roll{0-3}{Der Schatten zerrt von deiner Energie. Die ausgewählte Eigenschaft sinkt auf ihren niedrigsten Wert. (Nicht der Schädel.) Wenn die Eigenschaft schon auf ihrem niedrigsten Wert liegt, erniedrige eine andere Eigenschaft. }
+    \erolls
+}
