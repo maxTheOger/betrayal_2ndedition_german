@@ -98,7 +98,7 @@
 
     Eine alte, wirksam scheinende Waffe.
 }{
-    Du kannst den Revolver verwenden, um mit einem \speedroll\ anstelle eines \mightroll s anzugreifen. (Dein Gegner verteidigt sich dann mit \speed und nimmt physischen Schaden.)
+    Du kannst den Revolver verwenden, um mit einem \speedroll\ anstelle eines \mightroll s anzugreifen. (Dein Gegner verteidigt sich dann mit \speed\ und nimmt physischen Schaden.)
 
     Würfle mit einem zusätzlichen Würfel bei deinem Angriffswurf.
 
@@ -130,7 +130,7 @@
 
     Eine fiese Waffe. Nadeln und Schläuche winden sich aus dem Griff und stechen direkt in deine Venen.
 }{
-    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might Attacke mit dieser Waffe ausführst. Du verlierst dabei 1 \speed.
+    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might\ Attacke mit dieser Waffe ausführst. Du verlierst dabei 1 \speed.
 
     \nootherweapon
 
@@ -151,4 +151,87 @@
     \roll{5+}{Rücke beliebige, aber frei bewegliche Entdecker einen Raum näher zu dir.}
     \roll{0-4}{Der Verräter darf beliebig viele Monster einen Raum näher zu dir rücken. (Wenn du der Verräter bist, gilt dies nicht.) Wenn es keinen Verräter gibt, bewegen sich alle Monster in deine Richtung.}
     \erolls
+}
+
+
+\itemcard{Armor}{Rüstung}{
+    Es ist nur eine Requisite vom Renaissancefest, aber immerhin ist sie aus Metall.
+}{
+    Jedes Mal (nicht nur einmal pro Runde) wenn du physischen Schaden nimmst, erhälst du einen Schaden weniger.
+
+    Dieser Gegenstand kann nicht gestohlen werden.
+}
+
+\itemcard{Music Box}{Spieluhr}{
+    Eine handgefertigte Antiquität. Sie spielt eine gespenstische Melodie, die dir nicht mehr aus dem Kopf geht.
+}{
+    Einmal pro Zug kannst du die Spieluhr öffnen oder schließen.
+
+    Während die Spieluhr offen ist, muss jeder Entdecker oder jedes Monster mit \emph{Sanity}-Merkmal, dass den Raum der Spieluhr betritt oder seinen Zug darin beginnt, einen \sanityroll\ werfen. Schafft er keine 4+, ist er/es für den Rest des Zuges hypnotisiert.
+
+    Wenn ein Entdecker oder Monster, das die Spieluhr bei sich trägt, hypnotisiert wird, lässt er/es die Spieluhr fallen. Ist die Spieluhr währenddessen offen, bleibt sie offen.
+
+}
+
+\itemcard{Healing Salve}{Heilsalbe}{
+    Eine klebrige Paste in einer flachen Schale.
+}{
+    Du kannst dich oder einen anderen lebenden Entdecker im selben Raum mit dieser Salbe behandeln. Hebe entweder den \might\ oder den Geschwindigkeitswert (Speed) des geheilten Entdeckers auf seinen Startwert an.
+
+    \discarditem
+}
+
+
+\itemcard{Smelling Salts}{Riechsalz}{
+    Wow, das haut rein.
+}{
+    Du kannst dir oder einen anderen lebenden Entdecker im selben Raum das Riechsalz unter die Nase halten. Hebe den Wissenswert (Knowledge) des entsprechenden Entdeckers auf seinen Startwert an.
+
+    \discarditem
+}
+
+
+\itemcard{Sacrificial Dagger}{Opferdolch}{
+    Ein gewundener Sporn aus Eisen, überzogen mit mysteriösen Symbolen und triefend vor Blut.
+}{
+    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might\ Attacke mit dieser Waffe ausführst, aber vorher musst du einen \knowroll werfen:
+
+    \rolls
+    \roll{6+}{Kein Effekt.}
+    \roll{3-5}{Nehme einen Schaden in einer \mental.}
+    \roll{0-2}{Der Dolch winded sich in deiner Hand. Nehme zwei Schaden in \physicalsn. Du kannst in diesem Zug nicht mehr angreifen.}
+    \erolls
+}
+
+\itemcard{CANDLE}{Kerze}{
+    Sie lässt die Schatten tanzen - wenigstens hoffst du sie macht genau das.
+}{
+    Wenn du eine Ereigniskarte ziehst, darfst du jeden das Ereignis betreffenden Charakterwurf (Might, ...) mit einem zusätzlichen Würfel bestreiten.
+
+    Wenn du die Glocke (Bell), das Buch (Book) und die Kerze besitzt, erhalte +2 von jeder Eigenschaft (Might, ...). Sobald du einen dieser Gegenstände verlierst, verliere 2 von jeder Eigenschaft.
+}
+
+\itemcard{Bottle}{Flasche}{
+    Ein trüber Flakon, in dem eine schwarze Flüssigkeit schwimmt.
+}{
+    Ist der \haunt\ offenbart, kannst du während deines Zuges aus der Flasche trinken. Würfle mit drei Würfeln:
+
+
+    \rolls
+    \roll{6}{Versetze deine Figur in einen beliebigen Raum.}
+    \roll{5}{Erhalte 2 \might\ und 2 \speed.}
+    \roll{4}{Erhalte 2 \know\ und 2 \sanity.}
+    \roll{3}{Erhalte 1 \know\ und verliere 1 \might.}
+    \roll{2}{Verliere 2 \know\ und 2 \sanity.}
+    \roll{1}{Verliere 2 \might\ und 2 \speed.}
+    \roll{0}{Verliere 2 von jeder Eigenschaft.}
+    \erolls
+}
+
+\itemcard{Amulet Of The Ages}{Amulett der Zeitalter}{
+    Altes Silber und eingelassene Juwelen, Inschriften von Segnungen.
+}{
+    Erhalte sofort 1 von jeder Eigenschaft.
+
+    Verliere 3 von jeder Eigenschaft, wenn du das Amulett verlierst.
 }

@@ -67,6 +67,14 @@
 }
 
 
+\newcommand{\omen}[4]{
+\begin{tightcenter}\subsection{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
+\begin{bf}#3\end{bf}\end{tightcenter}
+{ \parskip5pt #4
+
+Mache nun einen Spukwurf (Haunt).}
+}
+
 \newcommand{\rolls}{\begin{itemize}
 \itemsep-5pt}
 \newcommand{\erolls}{\end{itemize}}
@@ -76,9 +84,9 @@
 
 
 \newcommand{\sanity}{geistige Gesundheit (Sanity)}
-\newcommand{\might}{Macht (Might) }
-\newcommand{\speed}{Geschwindigkeit (Speed) }
-\newcommand{\know}{Wissen (Knowledge) }
+\newcommand{\might}{Macht (Might)}
+\newcommand{\speed}{Geschwindigkeit (Speed)}
+\newcommand{\know}{Wissen (Knowledge)}
 
 \newcommand{\sanityroll}{\emph{Sanity}-Wurf}
 \newcommand{\mightroll}{\emph{Might}-Wurf}
@@ -86,7 +94,6 @@
 \newcommand{\knowroll}{\emph{Knowledge}-Wurf}
 
 \newcommand{\itemcards}{\emph{Item}-Karten}
-\newcommand{\itemcard}{\emph{Item}-Karte}
 
 
 \newcommand{\nootherweapon}{Du kannst keine andere Waffe verwenden, während du diese benutzt.}
@@ -94,16 +101,17 @@
 \newcommand{\haunt}{Spuk (Haunt)}
 
 
-\newcommand{\mental}{mentale Eigenschaft }
-\newcommand{\mentals}{mentale Eigenschaften }
-\newcommand{\physical}{physische Eigenschaft }
-\newcommand{\physicals}{physische Eigenschaften }
-\newcommand{\physicalsn}{physischen Eigenschaften }
+\newcommand{\mental}{mentale Eigenschaft}
+\newcommand{\mentals}{mentale Eigenschaften}
+\newcommand{\physical}{physische Eigenschaft}
+\newcommand{\physicals}{physische Eigenschaften}
+\newcommand{\physicalsn}{physischen Eigenschaften}
 
 \newcommand{\discardcard}{Entferne diese Karte nach Verwendung aus dem Spiel.}
 \newcommand{\discarditem}{Entferne diesen Gegenstand nach Verwendung aus dem Spiel.}
 
 
+\newcommand{\omencantbedts}{Dieses Omen kann nicht fallen gelassen, gehandelt oder gestohlen werden.}
 
 
 \begin{document}
@@ -113,6 +121,14 @@
 \input{secretsofsurvival/01-themummywalks}
 
 \twocolumn
+\section{Omen}
+
+\input{omen/crystalball}
+
+\pagebreak
+
+\section{Items / Gegenstände}
+
 \input{items/luckystone}
 
 
