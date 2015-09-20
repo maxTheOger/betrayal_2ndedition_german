@@ -66,6 +66,13 @@
 { \parskip5pt #4  }
 }
 
+\newcommand{\event}[4]{
+\begin{tightcenter}\subsection*{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
+\begin{bf}#3\end{bf}\end{tightcenter}
+{ \parskip5pt #4  }
+}
+
+
 
 \newcommand{\omen}[4]{
 \begin{tightcenter}\subsection{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
@@ -94,6 +101,8 @@ Mache nun einen Spukwurf (Haunt).}
 \newcommand{\knowroll}{\emph{Knowledge}-Wurf}
 
 \newcommand{\itemcards}{\emph{Item}-Karten}
+\newcommand{\itemcardd}{\emph{Item}-Karte}
+\newcommand{\eventcard}{\emph{Event}-Karte}
 
 
 \newcommand{\nootherweapon}{Du kannst keine andere Waffe verwenden, während du diese benutzt.}
@@ -119,6 +128,14 @@ Mache nun einen Spukwurf (Haunt).}
 
 
 \input{secretsofsurvival/01-themummywalks}
+
+\twocolumn
+\section{Events}
+
+\input{events/amomentofhope}
+
+\pagebreak
+\pagebreak
 
 \twocolumn
 \section{Omen}
