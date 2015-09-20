@@ -1,0 +1,120 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Frequently Asked Questions
+% LaTeX Template
+% Version 1.0 (22/7/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Adam Glesser (adamglesser@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry} % Required to make the margins smaller to fit more content on each page
+\usepackage[linkcolor=blue]{hyperref} % Required to create hyperlinks to questions from elsewhere in the document
+\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue} % Specify a color for hyperlinks
+\usepackage{todonotes} % Required for the boxes that questions appear in
+\usepackage{tocloft} % Required to give customize the table of contents to display questions
+\usepackage{microtype} % Slightly tweak font spacing for aesthetics
+\usepackage{palatino} % Use the Palatino font
+\usepackage[utf8]{inputenc}
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+% Create and define the list of questions
+\newlistof{questions}{faq}{\large List of Frequently Asked Questions} % This creates a new table of contents-like environment that will output a file with extension .faq
+\setlength\cftbeforefaqtitleskip{4em} % Adjusts the vertical space between the title and subtitle
+\setlength\cftafterfaqtitleskip{1em} % Adjusts the vertical space between the subtitle and the first question
+\setlength\cftparskip{.3em} % Adjusts the vertical space between questions in the list of questions
+
+% Create the command used for questions
+\newcommand{\question}[1] % This is what you will use to create a new question
+{
+\refstepcounter{questions} % Increases the questions counter, this can be referenced anywhere with \thequestions
+\par\noindent % Creates a new unindented paragraph
+\phantomsection % Needed for hyperref compatibility with the \addcontensline command
+\addcontentsline{faq}{questions}{#1} % Adds the question to the list of questions
+\todo[inline, color=green!40]{\textbf{#1}} % Uses the todonotes package to create a fancy box to put the question
+\vspace{1em} % White space after the question before the start of the answer
+}
+
+% Uncomment the line below to get rid of the trailing dots in the table of contents
+%\renewcommand{\cftdot}{}
+
+% Uncomment the two lines below to get rid of the numbers in the table of contents
+%\let\Contentsline\contentsline
+%\renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
+
+
+\newenvironment{tightcenter}{%
+  \setlength\topsep{0pt}
+  \setlength\parskip{0pt}
+  \begin{center}
+}{%
+  \end{center}
+}
+
+\newcommand{\itemcard}[4]{
+\begin{tightcenter}\subsection*{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
+\begin{bf}#3\end{bf}\end{tightcenter}
+{ \parskip5pt #4  }
+}
+
+
+\newcommand{\rolls}{\begin{itemize}
+\itemsep-5pt}
+\newcommand{\erolls}{\end{itemize}}
+\newcommand{\roll}[2]{
+\item [\bf #1] #2
+}
+
+
+\newcommand{\sanity}{geistige Gesundheit (Sanity)}
+\newcommand{\might}{Macht (Might) }
+\newcommand{\speed}{Geschwindigkeit (Speed) }
+\newcommand{\know}{Wissen (Knowledge) }
+
+\newcommand{\sanityroll}{\emph{Sanity}-Wurf}
+\newcommand{\mightroll}{\emph{Might}-Wurf}
+\newcommand{\speedroll}{\emph{Speed}-Wurf}
+\newcommand{\knowroll}{\emph{Knowledge}-Wurf}
+
+\newcommand{\itemcards}{\emph{Item}-Karten}
+\newcommand{\itemcard}{\emph{Item}-Karte}
+
+
+\newcommand{\nootherweapon}{Du kannst keine andere Waffe verwenden, während du diese benutzt.}
+
+\newcommand{\haunt}{Spuk (Haunt)}
+
+
+\newcommand{\mental}{mentale Eigenschaft }
+\newcommand{\mentals}{mentale Eigenschaften }
+\newcommand{\physical}{physische Eigenschaft }
+\newcommand{\physicals}{physische Eigenschaften }
+\newcommand{\physicalsn}{physischen Eigenschaften }
+
+\newcommand{\discardcard}{Entferne diese Karte nach Verwendung aus dem Spiel.}
+\newcommand{\discarditem}{Entferne diesen Gegenstand nach Verwendung aus dem Spiel.}
+
+
+
+
+\begin{document}
+
+
+
+\input{secretsofsurvival/01-themummywalks}
+
+\twocolumn
+\input{items/luckystone}
+
+
+
+\end{document}

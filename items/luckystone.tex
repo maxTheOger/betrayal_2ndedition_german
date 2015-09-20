@@ -1,0 +1,154 @@
+
+
+\itemcard{Lucky Stone}{Glücksstein}{
+    Ein glattes, gewöhnlich aussehendes Stück Felsgestein. Du fühlst, dass er dir Glück bringen wird.
+}{
+    Nachdem du gewürfelt hast, kannst du an diesem Stein reiben, um einen oder mehrere deiner Würfel nocheinmal zu würfeln.
+
+    \discarditem
+}
+
+\itemcard{Dark Dice}{Dunkle Würfel}{
+    Wie stehts um dein Glück?
+}{
+    Einmal pro Runde kannst du 3 Würfel werfen:
+    \rolls
+    \roll{6}{Gehe sofort zu irgendeinem Entdecker, aber nicht zum Verräter}
+    \roll{5}{Verschiebe einen anderen Entdecker aus deinem Raum in einen angrenzenden Raum.}
+    \roll{4}{+1 \physical}
+    \roll{3}{Bewege dich ohne Bewegungskosten sofort in einen angrenzenden Raum.}
+    \roll{2}{+1 \mental}
+    \roll{1}{Ziehe eine Ereigniskarte.}
+    \roll{0}{Reduziere alle deine Eigenschaften auf den ersten Schritt über dem Schädel und entferne die Karte aus dem Spiel.}
+    \erolls
+}
+
+
+\itemcard{Medical Kit}{Medizintasche}{
+    Ein Arztkoffer, aber die wichtigsten Medikamente sind schon geplündert worden.
+}{
+    Einmal pro Zug kannst du versuchen, dich oder einen anderen Entdecker im gleichen Raum mit einem Wissenswurf zu heilen.
+
+    \rolls
+    \roll{8+}{+3 für \physicals}
+    \roll{6-7}{+2 für \physicals}
+    \roll{4-5}{+1 für eine \physical}
+    \roll{0-3}{Es passiert nichts.}
+    \erolls
+
+    Du kannst eine Eigenschaft maximal bis zu ihrem Startwert heilen.
+}
+
+\itemcard{Idol}{Idol}{
+    Vielleicht hat es dich für einen höheren Zweck auserwählt. Möglicherweise Menschenopfer.
+}{
+    Einmal pro Zug kannst du an dem Idol reiben, bevor du einen Charakter-, Kampf- oder Ereigniswurf würfelst, um 2 zusätzliche Würfel (bis maximal 8 Würfel) einzusetzen. Jedes mal verlierst du 1 \sanity.
+
+}
+
+\itemcard{Axe}{Akt}{
+    WAFFE
+
+    Sehr scharf.
+}{
+    Wenn du diese Waffe verwendest, kannst einen zusätzlichen Würfel (bis maximal 8 Würfel) für einen \mightroll\ benutzen.
+
+    \nootherweapon
+}
+
+\itemcard{Adrenaline Shot}{Adrenalinespritze}{
+    Eine Spritze, die eine seltsame, fluosziierende Flüssigkeit enthält.
+}{
+    Du kannst diesen Gegensstand einsetzen, bevor du einen Charakterwurf würfelst, um zum Wurfergebnis 4 hinzuzufügen.
+
+    \discarditem
+}
+
+\itemcard{Angel Feather}{Engelsfeder}{
+    Eine makellose Feder schwirrt auf deine Hand.
+}{
+    Wenn du einen Wurf jedweder Art würfeln musst, kannst du stattdessen eine beliebige Zahl von 0 bis 8 direkt als Würfelergebnis verwenden.
+
+    \discarditem
+}
+
+\itemcard{Dynamite}{Dynamit}{
+    Die Zündschnur brennt \emph{noch} nicht.
+}{
+    Anstatt zu Attakieren kannst du Dynamit durch eine Tür in einen benachbarten Raum werfen. Jeder Entdecker und jedes Monster mit Macht und Geschwindigkeitsmerkmalen in diesem Raum muss einen \speedroll\ versuchen:
+
+    \rolls
+    \roll{5+}{Kein Schaden}
+    \roll{0-4}{Du nimmst 4 Schaden in \physicalsn}
+    \erolls
+
+    \discarditem
+}
+
+\itemcard{Pickpocket's Gloves}{Handschuhe des Diebes}{
+    Sich selbst zu helfen war noch nie so einfach.
+}{
+    Wenn du zusammen mit einem anderen Entdecker in einem Raum bist, kannst du ihm einen Gegenstand klauen.
+
+    \discarditem
+}
+
+\itemcard{Revolver}{Revolver}{
+    WAFFE
+
+    Eine alte, wirksam scheinende Waffe.
+}{
+    Du kannst den Revolver verwenden, um mit einem \speedroll\ anstelle eines \mightroll s anzugreifen. (Dein Gegner verteidigt sich dann mit \speed und nimmt physischen Schaden.)
+
+    Würfle mit einem zusätzlichen Würfel bei deinem Angriffswurf.
+
+    Mit dem Revolver kannst du im gleichen Raum oder in gerader Sichtlinie durch mehrere Türen treffen. Wenn du jemanden in einem anderen Raum angreifst, nimmst du im Falle einer Niederlage keinen Schaden.
+
+     \nootherweapon
+
+}
+
+\itemcard{Rabbit's Foot}{Hasenfuß}{
+    Der Hase hatte wohl kein Glück.
+}{
+    Einmal pro Zug kannst du \emph{einen} Würfel erneut werfen. Der zweite Wurf zählt.
+}
+
+\itemcard{Puzzle Box}{Rätsel-Schachtel}{
+    Irgendwie muss man die doch öffnen können.
+}{
+    Einmal pro Zug kannst du versuchen die Kiste mit einem \knowroll\ zu öffnen.
+
+    \rolls
+    \roll{+6}{Du öffnest die Box. Ziehe zwei \itemcards\ und entferne die Schachtel aus dem Spiel.}
+    \roll{0-5}{Du schaffst es nicht die Box zu öffnen.}
+    \erolls
+}
+
+\itemcard{Blood Dagger}{Blutdolch}{
+    WAFFE
+
+    Eine fiese Waffe. Nadeln und Schläuche winden sich aus dem Griff und stechen direkt in deine Venen.
+}{
+    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might Attacke mit dieser Waffe ausführst. Du verlierst dabei 1 \speed.
+
+    \nootherweapon
+
+    Du kannst diesen Dolch nicht handeln oder fallenlassen. Wenn er gestohlen wird, nimmst du 2 Schaden in \physicalsn.
+}
+
+
+\itemcard{Bell}{Glocke}{
+    Eine Messingglocke mit schallendem Gong.
+}{
+    Erhalte sofort 1 \sanity.
+
+    Verliere 1 \sanity, wenn du die Glocke verlierst.
+
+    Ist der \haunt\ offenbart, kannst du mittels eines \sanityroll s während deines Zuges die Glocke läuten:
+
+    \rolls
+    \roll{5+}{Rücke beliebige, aber frei bewegliche Entdecker einen Raum näher zu dir.}
+    \roll{0-4}{Der Verräter darf beliebig viele Monster einen Raum näher zu dir rücken. (Wenn du der Verräter bist, gilt dies nicht.) Wenn es keinen Verräter gibt, bewegen sich alle Monster in deine Richtung.}
+    \erolls
+}
