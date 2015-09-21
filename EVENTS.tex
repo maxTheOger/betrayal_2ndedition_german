@@ -5,28 +5,28 @@
 }{
     Plaziere einen \emph{Blessing}-Chip (Segnung) in diesem Zimmer.
 
-    Jeder Held darf bei jedem Charakterwurf (Might, ...) in diesem Zimmer einen zusätzlichen Würfel verwenden.
+    Jeder Held verwendet bei jedem Charakterwurf (Might, ...) in diesem Zimmer einen zusätzlichen Würfel.
 }
 
 \event{Angry Being}{Böses Wesen}{
-    Es kommt aus dem Schleim an der Wand neben dir hervor.
+    Es schält sich aus dem Schleim an der Wand neben dir hervor.
 }{
-    Du musst einen \speedroll versuchen:
+    Du musst einen \speedroll\ versuchen:
     \rolls
-    \roll{5+}{Du kommst davon. Erhalte 1 \speed .}
-    \roll{2-4}{Erhalte 1 mentalen Schaden.}
-    \roll{0-1}{Erhalte 1 mentalen und 1 pysischen Schaden.}
+    \roll{5+}{Du kommst davon. \gainspeed{1}.}
+    \roll{2-4}{\takediementaldamage{1}}
+    \roll{0-1}{\takediephysicalmentaldamage{1}{1}}
     \erolls
 }
 
 \event{Bloody Vision}{Blutige Vision}{
-    Die Wände in diesem Raum sind getränkt in  Blut. Blut tropft von der Decke, fließt die Wände herunter, über Schränke und Möbel und auf deine Schuhe. Im nächsten Augenblick ist es fort.
+    Die Wände in diesem Raum sind getränkt in  Blut. Es tropft von der Decke, fließt die Wände herunter, über Schränke und Möbel und auf deine Schuhe. Im nächsten Augenblick ist es fort.
 }{
     Du musst einen \sanityroll\ versuchen:
     \rolls
-    \roll{4+}{Du festigst deinen Geist. Erhalte 1 \sanity.}
-    \roll{2-3}{Verliere 1 \sanity.}
-    \roll{0-1}{Wenn sich ein Entdecker oder Monster in deinem oder einem angrenzenden Zimmer befinden, musst du ihn/sie/es angreifen (wenn du kannst). Wenn möglich, wähle denjenigen mit der niedrigsten \might.}
+    \roll{4+}{Du festigst deinen Geist. \gainsanity{1}.}
+    \roll{2-3}{\loosesanity{1}.}
+    \roll{0-1}{Wenn sich ein Entdecker oder Monster in deinem oder einem angrenzenden Zimmer befinden, musst du ihn/sie/es angreifen (wenn du kannst). Wähle denjenigen mit der niedrigsten \might.}
     \erolls
 }
 
@@ -36,23 +36,23 @@
 }{
     Du musst einen \sanityroll\ versuchen:
     \rolls
-    \roll{4+}{Du spürst Wärme unter deiner Haut, bist aber ansonsten okay. Erhalte 1 \sanity.}
+    \roll{4+}{Es wird heiß am Kragen, du bist aber ansonsten okay. \gainsanity{1}.}
     \roll{2-3}{Raus, raus, du musst hier raus! Setze deinen Entdecker in die Eingangshalle.}
-    \roll{0-1}{Du gehst in Flammen auf. Nehme 1 physischen Schaden. Dann nehme 1 mentalen Schaden als du die Flammen ausklopfst.}
+    \roll{0-1}{Du gehst in Flammen auf. \takediephysicaldamage{1} Dann nehme 1 Würfel mentalen Schaden als du die Flammen ausklopfst.}
     \erolls
 }
 
 \event{Closet Door}{Schranktür}{
     Die Schranktür dort ist offen... nur einen Spalt. Darin muss sich etwas befinden.
 }{
-    Lege den Closet-Chip (Schrank) in dieses Zimmer.
+    Lege den \chip{Closet}{Schrank} in dieses Zimmer.
 
-    Einmal während seines Zuges, kann ein Entdecker zwei Würfel werfen um den Schrank zu öffnen.
+    Einmal während seines Zuges, kann ein Entdecker zwei Würfel werfen, um den Schrank zu öffnen.
 
     \rolls
     \roll{4}{Ziehe eine \itemcardd .}
     \roll{2-3}{Ziehe eine \eventcard .}
-    \roll{0-1}{Ziehe eine \eventcard\ und entferne den Closet-Chip.}
+    \roll{0-1}{Ziehe eine \eventcard\ und entferne den \chipe{Closet}.}
     \erolls
 
 }
@@ -62,9 +62,9 @@
 }{
     Du musst einen \sanityroll\ versuchen:
     \rolls
-    \roll{5+}{Du blinzelst und sie sind weg. Erhalte 1 \sanity.}
-    \roll{1-4}{Verliere 1 \sanity.}
-    \roll{0}{Verliere 2 \sanity.}
+    \roll{5+}{Du blinzelst und sie sind weg. \gainsanity{1}.}
+    \roll{1-4}{\loosesanity{1}.}
+    \roll{0}{\loosesanity{2}.}
     \erolls
 
 }
@@ -75,7 +75,7 @@
 }{
     Der Spieler zu deiner Rechten wirft einen \mightroll\ mit 4 Würfeln für die Puppe. Du verteidigst dich normal, indem du einen \mightroll\ ausführst.
 
-    Wenn du Schaden davonträgst, erhält der Entdecker mit dem Speer (Spear) 2 \might\ (es sei denn du besitzt den Speer).
+    Wenn du Schaden davonträgst, erhält der Entdecker mit dem Speer (Spear) 2 \might\ (es sei denn, du besitzt den Speer).
 }
 
 
@@ -84,12 +84,12 @@
 }{
     Du musst einen \speedroll\ versuchen:
     \rolls
-    \roll{+3}{Du weichst aus. Erhalte 1 \speed.}
-    \roll{1-2}{Du bist unter Schutt vergraben. Ńehme 1 \emph{Würfel} physischen Schaden.}
-    \roll{0}{Du bist unter Schutt vergraben. Ńehme 2 \emph{Würfel} physischen Schaden.}
+    \roll{3+}{Du weichst aus. \gainspeed{1}.}
+    \roll{1-2}{Du bist unter Schutt vergraben. \takediephysicaldamage{1}}
+    \roll{0}{Du bist unter Schutt vergraben. \takediephysicaldamage{2}}
     \erolls
 
-    Wenn du unter Schutt begraben bist, behalte diese Karte. Du kannst nichts machen bis du befreit wurdest. Einmal pro Zug kann ein Entdecker einen \mightroll\ versuchen um dich zu befreien. (Du kannst diesen Wurf ebenfalls versuchen.) 4+ befreit. Nach drei erfolglosen Versuchen, befreist du dich in deinem folgenden Zug automatisch und kannst normal agieren.
+    Wenn du unter Schutt begraben bist, behalte diese Karte. Du kannst nichts machen, bis du befreit wurdest. Einmal pro Zug kann ein Entdecker einen \mightroll\ versuchen, um dich zu befreien. (Du kannst diesen Wurf ebenfalls versuchen.) 4+ befreit. Nach drei erfolglosen Versuchen befreist du dich in deinem folgenden Zug automatisch und kannst normal agieren.
 }
 
 \event{Disquieting Sounds}{Beunruhigende Geräusche}{
@@ -97,7 +97,7 @@
 
     Ein Entsetzensschrei.
 
-    Das Kracken zerbrechenden Glases.
+    Das Krirschen zerbrechenden Glases.
 
     Dann: Stille.
 }{
@@ -106,9 +106,9 @@
 }
 
 \event{Drip ... Drip ... Drip ...}{Tropf ... Tropf ... Tropf ...}{
-    Ein rhythmisches Geräusch macht dich verrückt.
+    Ein rhythmisches Geräusch nagt an deinem Verstand.
 }{
-    Lege einen Drip-Chip (Tröpfeln) in diesen Raum.
+    Lege einen \chip{Drip}{Tröpfeln} in diesen Raum.
 
     Jeder Entdecker rollt bei jedem Charakterwurf (Might, ...) in diesem Raum mit einem Würfel weniger.
 }
@@ -121,8 +121,8 @@
     \rolls
     \roll{4}{Du und der nächstgelegene Entdecker erhalten 1 \might.}
     \roll{3}{Du erhälst 1 \might\ und der nächst\-ge\-le\-ge\-ne Entdecker verliert 1 \sanity.}
-    \roll{2}{Nehme 1 \sanity\ Schaden.}
-    \roll{1}{Nehme 1 \speed\ Schaden.}
+    \roll{2}{\loosesanity{1}.}
+    \roll{1}{\loosespeed{1}.}
     \roll{0}{Jeder Entdecker verliert eine Stufe einer Charaktereigenschaft (Might, ...) seiner Wahl.}
     \erolls
 }
@@ -132,9 +132,9 @@
 }{
     Du musst einen \sanityroll versuchen:
     \rolls
-    \roll{4+}{Du blinzelst und er ist verschwunden. Erhalte 1 \sanity.}
-    \roll{2-3}{Die Vision verstört dich. Verliere 1 \sanity.}
-    \roll{0-1}{Du befindest dich wirklich in dem Sarg. Du nimmst 1 \sanity\ und 1 \might\ Schaden, als du dich herausschiebst. Wenn der Friedhof (Graveyard) oder die Crypta (Crypt) entdeckt wurden, versetze deine Figur in einen dieser Räume. (Du wählst aus.)}
+    \roll{4+}{Du blinzelst und er ist verschwunden. \gainsanity{1}.}
+    \roll{2-3}{Die Vision verstört dich. \loosesanity{1}.}
+    \roll{0-1}{Du befindest dich wirklich in dem Sarg. Du nimmst 1 \sanity\ und 1 \might\ Schaden, als du dich herausgräbst. Wenn der Friedhof (Graveyard) oder die Crypta (Crypt) entdeckt wurden, versetze deine Figur in einen dieser Räume. (Du wählst aus.)}
     \erolls
 }
 
@@ -143,8 +143,8 @@
 }{
     Versuche einen \mightroll:
     \rolls
-    \roll{4+}{Du schüttelst den Staub ab. Erhalte 1 \might}
-    \roll{0-3}{Irgendwas stimmt nicht. Behalte diese Karte. Nehme 1 phsyischen Schaden am Anfang jeder deiner Runden. Lege diese Karte aus dem Spiel, sobald einer deiner Charakterwerte steigt oder wenn du einen Zug auf dem Balkon, im Garten, auf dem Friedhof, in der Turnhalle, im Lagerrraum, auf der Veranda oder auf dem Turm beendest. (Balcony, Gardens, Graveyard, Gymnasium, Larder, Patio or Tower)}
+    \roll{4+}{Du schüttelst den Staub ab. \gainmight{1}.}
+    \roll{0-3}{Irgendwas stimmt nicht. Behalte diese Karte. Nehme 1 phsyischen Schaden am Anfang jeder deiner Züge. Lege diese Karte aus dem Spiel, sobald einer deiner Charakterwerte steigt oder du deinen Zug auf dem Balkon, im Garten, auf dem Friedhof, im Turnraum, im Lagerrraum, auf der Veranda oder auf dem Turm beendest. (Balcony, Gardens, Graveyard, Gymnasium, Larder, Patio or Tower)}
     \erolls
 }
 
@@ -169,7 +169,7 @@
     \roll{0-1}{Du verlierst 1 Stufe der entsprechenden Eigenschaft.}
     \erolls
 
-    Wenn du bei allen Würfen 2+ wirfst, erhälst du einen zusätzlichen Punkt zu einem Charakterwert deiner Wahl.
+    Wenn du bei allen 4 Würfen 2+ wirfst, erhälst du einen zusätzlichen Punkt zu einem Charakterwert deiner Wahl.
 }
 
 
@@ -180,11 +180,11 @@
 
     \rolls
     \roll{4+}{Du widerstehst dem Geräusch.}
-    \roll{1-3}{Nehme 1 \emph{Würfel} mentalen Schaden.}
-    \roll{0}{Nehme 2 \emph{Würfel} mentalen Schaden.}
+    \roll{1-3}{\takediementaldamage{1}}
+    \roll{0}{\takediementaldamage{2}}
     \erolls
 
-    Jedes Ergebnis betrifft nur den Entdecker, der den jeweiligen Wurf warf.
+    Jedes Ergebnis betrifft nur den Entdecker, der würfelt.
 }
 
 \event{Image In The Mirror}{Bild im Spiegel}{
@@ -215,7 +215,7 @@
     Wähle eine dieser beiden Optionen:
     \rolls
     \roll{$\bullet$}{Schaue dir die drei obersten Karten einer der vier Decks an, vertausche sie nach Wahl und lege sie zurück auf den Kartenstapel. Verrate niemandem dein Wissen.}
-    \roll{$\bullet$}{Du kannst stattdessen auch mit vier Würfeln werfen und das Ergebnis aufschreiben. Bei irgendeinem zukünftigen Wurf kannst du dieses Ergebnis verwenden anstatt zu würfeln. Wenn diese Zahl größer als das maximal mögliche Ergebnis ist, verwende das höchstmögliche Ergebnis.}
+    \roll{$\bullet$}{Du kannst stattdessen auch mit vier Wür\-feln werfen und das Ergebnis aufschreiben. Bei irgendeinem zukünftigen Wurf kannst du dieses Ergebnis verwenden anstatt zu wür\-feln. Wenn diese Zahl größer als das maximal mögliche Ergebnis ist, verwende das höchst\-mög\-liche Ergebnis.}
     \erolls
 }
 
@@ -225,7 +225,7 @@
 
     ``Nein'', sagt Jonah, ``Ich will ihn ganz.'' Jonah nimmt den Kreisel und schlägt dem anderen Jungen ins Gesicht. Der Junge fällt. Jonah schlägt  ihn noch, als der Anblick schwindet.
 }{
-    Wenn ein Entdecker die Rätsel-Schachtel (Puzzle Box) hat, legt dieser sie aus dem Spiel und zieht stattdessen eine Ersatz-\itemcardd. Wenn dies passiert, erhälst du 1 \sanity. Andernfalls erhälst du einen \emph{Würfel} mentalen Schaden.
+    Wenn ein Entdecker die Rätsel-Schachtel (Puzzle Box) hat, legt dieser sie aus dem Spiel und zieht stattdessen eine Ersatz-\itemcardd. Wenn dies passiert, erhälst du 1 \sanity. Andernfalls nehme du einen Würfel mentalen Schaden.
 }
 
 \event{Lights Out}{Lichter aus}{
@@ -239,14 +239,14 @@
 \event{Locked Safe}{Verschlossener Safe}{
     Hinter einem Portrait befindet sich ein Wandsafe. Natürlich verklemmt.
 }{
-    Lege einen Safe-Chip in den Raum.
+    Lege einen \chipe{Safe} in den Raum.
 
     Einmal pro Runde kann ein Entdecker den Safe mithilfe eines \knowroll\ öffnen:
 
     \rolls
-    \roll{5+}{Ziehe zwei \itemcards und entferne den Safe-Chip.}
-    \roll{2-4}{Nehme einen Würfel physischen Schaden. Der Safe bleibt verschlossen.}
-    \roll{0-1}{Nehme zwei Würfel physischen Schaden. Der Safe bleibt verschlossen.}
+    \roll{5+}{Ziehe zwei \itemcards\ und entferne den \chipe{Safe}.}
+    \roll{2-4}{\takediephysicaldamage{1} Der Safe bleibt verschlossen.}
+    \roll{0-1}{\takediephysicaldamage{2} Der Safe bleibt verschlossen.}
     \erolls
 }
 
@@ -257,17 +257,19 @@
 
     \rolls
     \roll{4+}{Die Gesichter sind nur Einbildungen in Licht und Schatten. Alles ist gut.}
-    \roll{1-3}{Nehme einen Würfel mentalen Schaden. (Nehme einen Würfel zusätzlichen Schaden, wenn sich dein Entdecker in einem Raum mit einem Ereignissymbol befindet.)}
-    \roll{0}{Nehme einen Würfel mentalen schaden. (Nehme zwei Würfel zusätzlichen Schaden, wenn sich dein Entdecker in einem Raum mit einem Ereignissymbol befindet.)}
+    \roll{1-3}{\takediementaldamage{1} (Nehme einen Würfel zusätzlichen mentalen Schaden, wenn sich dein Entdecker in einem Raum mit einem Ereignissymbol befindet.)}
+    \roll{0}{\takediementaldamage{1} (Nehme zwei Würfel zusätzlichen mentalen Schaden, wenn sich dein Entdecker in einem Raum mit einem Ereignissymbol befindet.)}
     \erolls
+
+    Jedes Ergebnis betrifft nur den Entdecker, der würfelt.
 }
 
 \event{Mystic Slide}{Mystische Rutsche}{
     Bist du im Keller (Basement), betrifft dieses Event den nächsten Entdecker zu deiner Linken, der sich nicht im Keller aufhält. Lege diese Karte aus dem Spiel, wenn alle Entdecker im Keller sind.
 
-    Der Boden fällt unter dir ab.
+    Der Boden vor dir fällt in die Tiefe ab.
 }{
-    Setze den Slide-Chip (Rutsche) in diesen Raum, dann versuche einen \mightroll\ um zu rutschen.
+    Setze den \chip{Slide}{Rutsche} in diesen Raum, dann versuche einen \mightroll\ um zu rutschen.
 
     \rolls
     \roll{5+}{Du kontrollierst die Rutsche. Versetze deine Figur in einen Raum deiner Wahl in irgendeinem Stock unterhalb des Ausgangsstockwerks.}
@@ -283,7 +285,7 @@
 }{
     Du musst einen \knowroll\ versuchen:
     \rolls
-    \roll{5+}{Du erkennst die Geister als frühere Bewohner des Hauses. Du rufst ihre Namen, sie drehen sich zu dir um, dunkle Geheimnisse des Hauses flüsternd. Erhalte 1 \know.}
+    \roll{5+}{Du erkennst die Geister als frühere Bewohner des Hauses. Du rufst ihre Namen, sie drehen sich zu dir um, dunkle Geheimnisse des Hauses flüsternd. \gainknow{1}.}
     \roll{0-4}{Du fährst erschrocken zurück, unfähig zuzusehen.}
     \erolls
 }
@@ -291,12 +293,12 @@
 \event{Phone Call}{Anruf}{
     Ein Telefon klingelt im Zimmer. Du fühlst dich verpflichtet abzunehmen.
 }{
-    Würfle mit zwei Würfeln. Die zuckersüße Stimme einer alten Frau Sagt:
+    Würfle mit zwei Würfeln. Die zuckersüße Stimme einer alten Frau sagt:
     \rolls
-    \roll{4}{``Tee und Kuchen! Tee und Kuchen! Du warst immer mein Liebster.'' Erhalte 1 \sanity.}
-    \roll{3}{``Ich war immer für dich da, mein Süßer. Beobachten ...'' Erhalte 1 \know.}
-    \roll{1-2}{``Ich bin hier, mein Honigküchlein! Gib uns einen Kuss!'' Nehme einen Würfel mentalen Schaden.}
-    \roll{0}{``Böse kleine Kinder müssen bestraft werden!'' Nehme zwei Würfel physischen Schaden.}
+    \roll{4}{``Tee und Kuchen! Tee und Kuchen! Du warst immer mein Liebster.'' \gainsanity{1}.}
+    \roll{3}{``Ich bin immer für dich da, mein Süßer. Ich beobachte dich ...'' \gainknow{1}.}
+    \roll{1-2}{``Wir sind hier, mein Spatz. Gib uns einen Kuss!'' \takediementaldamage{1}}
+    \roll{0}{``Böse kleine Kinder müssen bestraft werden!'' \takediephysicaldamage{2}}
     \erolls
 }
 
@@ -306,14 +308,14 @@
     Du musst eine Charaktereigenschaft auswählen und für diese einen Wurf versuchen:
     \rolls
     \roll{4+}{Du widerstehst den Verlockungen des Schattens. Erhalte 1 in einem Charakterwert deiner Wahl.}
-    \roll{0-3}{Der Schatten zerrt von deiner Energie. Die ausgewählte Eigenschaft sinkt auf ihren niedrigsten Wert über dem Schädel. Wenn die Eigenschaft schon auf ihrem niedrigsten Wert liegt, erniedrige eine andere Eigenschaft. }
+    \roll{0-3}{Der Schatten zerrt von deiner Energie. Die ausgewählte Eigenschaft sinkt auf die Stufe direkt über dem Schädel. Wenn die Eigenschaft schon auf ihrer niedrigsten Stufe steht, erniedrige eine andere Eigenschaft. }
     \erolls
 }
 
 \event{Revolving Wall}{Drehende Wand}{
-    Die Wand deht sich an eine andere Stelle.
+    Ein Teil der Wand schwingt herum.
 }{
-    Lege den Wall-Switch-Chip (Wandschalter) an eine Wand ohne Ausgang oder an eine Ecke in diesem Raum. Wenn es keinen Raum auf der anderen Seite des Wandschalters gibt, ziehe Raumkarten, bis du eine für das entsprechende Stockwerk gefunden hast und lege sie an. (Wenn es für das Stockwerk keine Karten  mehr gibt, nehme diese Karte aus dem Spiel.) Tritt in den Raum ein.
+    Lege den \chip{Wall-Switch}{Wandschalter} an eine Wand ohne Ausgang oder an eine Ecke in diesem Raum. Wenn es keinen Raum auf der anderen Seite des Wandschalters gibt, ziehe Raumkarten, bis du eine für das entsprechende Stockwerk gefunden hast und lege sie an. (Wenn es für das Stockwerk keine Karten  mehr gibt, nehme diese Karte aus dem Spiel.) Tritt in den Raum ein.
 
     Einmal während des Zuges eines Entdeckers, wenn sich dieser in einem der beiden vom Wandschalter berührten Räume befindet, kann er/sie einen \knowroll\ versuchen, um den Wandschalter umzulegen:
 
@@ -333,9 +335,9 @@
 }{
     Du musst einen \sanityroll versuchen:
     \rolls
-    \roll{5+}{Verwirrende Gerüche, mehr nicht. Erhalte 1 \sanity.}
-    \roll{2-4}{Verliere 1 \might.}
-    \roll{1}{Nehme 1 \might\ und 1 \speed\ Schaden.}
+    \roll{5+}{Verwirrende Gerüche, mehr nicht. \gainsanity{1}.}
+    \roll{2-4}{\loosemight{1}.}
+    \roll{1}{Verliere 1 \might\ und 1 \speed.}
     \roll{0}{Du krümmst dich vor Übelkeit. Verliere 1 von jeder Charaktereigenschaft.}
     \erolls
 }
@@ -343,7 +345,7 @@
 \event{Secret Passage}{Geheimgang}{
     Ein Bereich der Wand fährt zur Seite. Dahinter erstreckt sich ein modriger Tunnel.
 }{
-    Lege einen \emph{Secret Passage}-Chip in diesen Raum. Würfle mit 3 Würfeln und lege den zweiten \emph{Secret Passage}-Chip in:
+    Lege einen \chip{Secret Passage}{Geheimgang} in diesen Raum. Würfle mit 3 Würfeln und lege den zweiten \chipe{Secret Passage} in:
 
     \rolls
     \roll{6}{Irgendeinen schon existierenden Raum.}
@@ -364,7 +366,7 @@
 \event{Secret Stairs}{Geheimtreppe}{
     Ein schreckliches Knarzen hallt umher. Du hast eine geheime Treppe entdeckt.
 }{
-    Lege einen \emph{Secret Stairs}-Chip (Geheimtreppe) in diesen Raum und einen zweiten \emph{Secret Stairs}-Chip in einen anderen existierenden Raum auf einem anderen Stockwerk. Das verwenden der Geheimtreppe zählt als Bewegung. Die Treppe selbst zählt jedoch nicht als Feld.
+    Lege einen \chip{Secret Stairs}{Geheimtreppe} in diesen Raum und einen zweiten \chipe{Secret Stairs} in einen anderen existierenden Raum auf einem anderen Stockwerk. Das verwenden der Geheimtreppe zählt als Bewegung. Die Treppe selbst zählt jedoch nicht als Feld.
 
     Du kannst den Treppen jetzt folgen, auch wenn du keine Bewegung mehr übrig hast. Wenn du ihnen jetzt folgst, ziehe eine \eventcard\ im nächsten Raum.
 }
@@ -376,9 +378,9 @@
 
     \rolls
     \roll{5+}{Du bleibst auf den Füßen.}
-    \roll{3-4}{Der Wind wirft dich um. Nehme einen Würfel physischen Schaden.}
-    \roll{1-2}{Der Wind kühlt deine Seele aus. Nehme einen Würfel mentalen Schaden.}
-    \roll{0}{Der Wind wirft dich derb um. Nehme einen Würfel physischen Schaden. Lege einen deiner Gegenstände (wenn du welche hast) in die Eingangshalle (Entrance Hall).}
+    \roll{3-4}{Der Wind wirft dich um. \takediephysicaldamage{1}}
+    \roll{1-2}{Der Wind kühlt deine Seele aus. \takediementaldamage{1}}
+    \roll{0}{Der Wind wirft dich derb um. \takediephysicaldamage{1}. Lege einen deiner Gegenstände (wenn du welche hast) in die Eingangshalle (Entrance Hall).}
     \erolls
 
     Jedes Ergebnis betrifft nur den Entdecker, der würfelt.
@@ -392,8 +394,8 @@
 
     \rolls
     \roll{4+}{Du wartest ruhig bis dein Hörsinn zurückkehrt.}
-    \roll{1-3}{Du schreist einen tonlosen Schrei. Nehme einen Würfel mentalen Schaden. }
-    \roll{0}{Du rastest aus. Nehme zwei Würfel mentalen Schaden.}
+    \roll{1-3}{Du schreist einen tonlosen Schrei. \takediementaldamage{1} }
+    \roll{0}{Du rastest aus. \takediementaldamage{2}}
     \erolls
 
     Jedes Ergebnis betrifft nur den Entdecker, der würfelt.
@@ -402,13 +404,13 @@
 \event{Skeletons}{Gerippe}{
     Mutter und Kind, sich immer noch umarmend.
 }{
-    Lege einen \emph{Skeleton}-Chip (Skelett) in diesen Raum. Nehme einen Würfel mentalen Schaden.
+    Lege einen \chip{Skeleton}{Skelett} in diesen Raum. Nehme einen Würfel mentalen Schaden.
 
     Einmal während seines Zuges kann ein Entdecker einen \sanityroll versuchen, um die Skelette zu durchsuchen.
 
     \rolls
-    \roll{5+}{Ziehe eine \itemcardd. Entferne den \emph{Skeleton}-Chip.}
-    \roll{0-4}{Du stocherst herum, findest jedoch nichts. Nehme einen Würfel mentalen Schaden.}
+    \roll{5+}{Ziehe eine \itemcardd. Entferne den \chipe{Skeleton}.}
+    \roll{0-4}{Du stocherst herum, findest jedoch nichts. \takediementaldamage{1}}
     \erolls
 
     Jedes Ergebnis betrifft nur den Entdecker, der würfelt.
@@ -417,7 +419,7 @@
 \event{Smoke}{Rauch}{
     Rauch wabert um dich herum. Du hustest während du dir Tränen aus den Augen wischt.
 }{
-    Lege den \emph{Smoke}-Chip (Rauch) in den Raum. Der Rauch blockiert die Sichtlinie von angrenzenden Räumen. Ein Entdecker würfelt mit zwei Würfeln weniger (aber mindestens mit einem Würfel) bei allen Charakterwürfen, während er sich in diesem Zimmer aufhält.
+    Lege den \chip{Smoke}{Rauch} in den Raum. Der Rauch blockiert die Sichtlinie von angrenzenden Räumen. Ein Entdecker würfelt mit zwei Würfeln weniger (aber mindestens mit einem Würfel) bei allen Charakterwürfen, während er sich in diesem Zimmer aufhält.
 }
 
 
@@ -427,7 +429,7 @@
     Wenn du herausfinden willst, was seltsam ist, versuche einen \knowroll:
     \rolls
     \roll{4+}{Eine Sektion der Wand schiebt sich seitwärts, eine Nische preisgebend. Ziehe eine \itemcardd.}
-    \roll{0-3}{Du kannst es einfach nicht herausfinden, was dich ein wenig verrückt macht. Verliere 1 \sanity.}
+    \roll{0-3}{Du kannst es einfach nicht herausfinden, was dich ein wenig verrückt macht. \loosesanity{1}.}
     \erolls
 }
 
@@ -441,9 +443,9 @@
     Du musst einen \speedroll\ versuchen:
 
     \rolls
-       \roll{4+}{Du kommst frei. Erhalte 1 \speed.}
-       \roll{1-3}{Nehme 1 \might\ Schaden.}
-       \roll{0}{Nehme 1 \might\ und 1 \speed\ Schaden.}
+       \roll{4+}{Du kommst frei. \gainspeed{1}.}
+       \roll{1-3}{\loosemight{1}.}
+       \roll{0}{Verliere 1 \might\ und 1 \speed.}
        \erolls
 }
 
@@ -454,8 +456,8 @@
 
     \rolls
     \roll{4+}{Sie ist weg. Erhalte 1 in der Eigenschaft, die du für den Wurf benutzt hast.}
-    \roll{1-3}{Sie beißt dich. Nehme einen Würfel physischen Schaden.}
-    \roll{0}{Sie beißt ein Stück Fleisch aus dir heraus. Nehme 2 Würfel physischen Schaden.}
+    \roll{1-3}{Sie beißt dich. \takediephysicaldamage{1}}
+    \roll{0}{Sie beißt ein Stück Fleisch aus dir heraus. \takediephysicaldamage{2}}
     \erolls
 }
 
@@ -473,7 +475,7 @@
     \roll{0-2}{Du springst in die Patio. (Wenn sie sich nicht im Haus befindet, durchsuche den Zimmerstapel danach, lege sie an und mische die Karten.) Setze deine Figur in die Patio und erleide einen Würfel physischen Schaden.}
     \erolls
 
-    Jedes Ergebnis betrifft nur den Entdecker, der den jeweiligen Wurf warf.
+    Jedes Ergebnis betrifft nur den Entdecker, der würfelt.
 }
 
 \event{The Lost One}{Die Verlorene}{
@@ -517,13 +519,13 @@
 }{
     Du musst einen \mightroll\ versuchen:
     \rolls
-    \roll{4+}{Du kommst frei. Erhalte 1 \might\ und lege diese Karte aus dem Spiel.}
+    \roll{4+}{Du kommst frei. \gainmight{1}\ und nehme diese Karte aus dem Spiel.}
     \roll{0-3}{Du steckst fest. Behalte diese Karte.}
     \erolls
 
-    Steckst du fest, kannst du nichts machen, bis du befreit bist. Einmal pro Zug kann ein Entdecker einen \mightroll\ versuchen, um dich zu befreien. (Du kannst diesen Wurf ebenfalls versuchen.) 4+ befreit, aber du erhälst keinen \emph{Might}-Bonus. Jeder, der es nicht schafft dich zu befreien, kann sich für den Rest seines Zuges nicht bewegen. Nach drei erfolglosen Versuchen kannst du dich automatisch in deinem nächsten Zug befreien und diesen Zug normal spielen.
+    Steckst du fest, kannst du nichts machen, bis du befreit bist. Einmal pro Zug kann ein Entdecker einen \mightroll\ versuchen, um dich zu befreien. (Du kannst diesen Wurf ebenfalls versuchen.) 4+ befreit, aber du erhälst keinen \emph{Might}-Bonus. Jeder, der es nicht schafft dich zu befreien, kann sich für den Rest seines Zuges nicht bewegen. Nach drei erfolglosen Versuchen, befreist du dich in deinem folgenden Zug automatisch und kannst normal agieren.
 
-    Lege diese Karte aus dem Spiel, sobald du dich befreit hast.
+    Nehme diese Karte aus dem Spiel, sobald du dich befreit hast.
 }
 
 
@@ -538,5 +540,5 @@
 \event{Whoops!}{Hoppla!}{
     Du fühlst einen Körper an deinen Füßen. Bevor du einen Schritt zurücktreten kannst, wirst du umgestoßen. Eine kichernde Stimme rennt davon.
 }{
-    Nehme alle deine \itemcards\ (keine \omencards) und mische sie. Der Spieler zu deiner Rechten zieht zufällig eine davon und legt sie aus dem Spiel. Dann lege deine \itemcards\ wieder offen hin.
+    Nehme alle deine \itemcards\ (keine \omencards) und mische sie. Der Spieler zu deiner Rechten zieht zufällig eine davon und nimmt sie aus dem Spiel. Dann lege deine \itemcards\ wieder offen hin.
 }

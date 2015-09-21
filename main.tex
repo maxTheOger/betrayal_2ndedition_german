@@ -17,6 +17,7 @@
 \documentclass[10pt,a4paper,oneside,ngerman]{article}
 
 \usepackage[ngerman]{babel}
+\usepackage{color}
 
 \usepackage[margin=1in]{geometry} % Required to make the margins smaller to fit more content on each page
 %\usepackage[linkcolor=blue]{hyperref} % Required to create hyperlinks to questions from elsewhere in the document
@@ -26,8 +27,11 @@
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
 %\usepackage{palatino} % Use the Palatino font
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+\definecolor{titlecolor}{rgb}{1.0,0.2,0.1}      % hellgruener Rahmen
 
 
 
@@ -39,45 +43,83 @@
   \end{center}
 }
 
+\newcommand{\Uppercase}[1]{\expandafter\MakeUppercase\expandafter{#1}}
+
+\newcommand{\uppercaseEngGer}[2]{\textcolor{titlecolor}{\Uppercase{#1}} \newline \Uppercase{#2}}
+
+\newenvironment{absolutelynopagebreak}
+  {\par\nobreak\vfil\penalty0\vfilneg
+   \vtop\bgroup}
+  {\par\xdef\tpd{\the\prevdepth}\egroup
+   \prevdepth=\tpd}
+
+
 \newcommand{\itemcard}[4]{
-\begin{tightcenter}\subsection{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
-\begin{bf}#3\end{bf}\end{tightcenter}
-{ \parskip5pt #4  }
+    \begin{absolutelynopagebreak}
+    \begin{tightcenter}
+        \subsection[#1]{\uppercaseEngGer{#1}{#2}}
+        \begin{bf}#3\end{bf}
+    \end{tightcenter}
+    { \parskip5pt #4  }
+    \end{absolutelynopagebreak}
 }
 
 \newcommand{\event}[4]{
-\begin{tightcenter}\subsection{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
-\begin{bf}#3\end{bf}\end{tightcenter}
-{ \parskip5pt #4  }
+    \begin{absolutelynopagebreak}
+    \begin{tightcenter}
+        \subsection[#1]{\uppercaseEngGer{#1}{#2}}
+        \begin{bf}#3\end{bf}
+    \end{tightcenter}
+    { \parskip5pt #4  }
+    \end{absolutelynopagebreak}
 }
 
-
-
 \newcommand{\omen}[4]{
-\begin{tightcenter}\subsection{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
-\begin{bf}#3\end{bf}\end{tightcenter}
-{ \parskip5pt #4
+    \begin{absolutelynopagebreak}
+    \begin{tightcenter}
+        \subsection[#1]{\uppercaseEngGer{#1}{#2}}
+        \begin{bf}#3\end{bf}
+    \end{tightcenter}
+    { \parskip5pt #4
 
-Mache nun einen Spukwurf (Haunt).}
+    Mache nun einen Spukwurf (Haunt).}
+    \end{absolutelynopagebreak}
 }
 
 \newcommand{\rolls}{\begin{itemize}
-\itemsep-5pt}
+\itemsep-2pt}
 \newcommand{\erolls}{\end{itemize}}
 \newcommand{\roll}[2]{
 \item [\bf #1] #2
 }
 
 
-\newcommand{\sanity}{geistige Gesundheit (Sanity)}
-\newcommand{\might}{Macht (Might)}
-\newcommand{\speed}{Geschwindigkeit (Speed)}
-\newcommand{\know}{Wissen (Knowledge)}
+\newcommand{\sanity}{\emph{Sanity}}
+\newcommand{\might}{\emph{Might}}
+\newcommand{\speed}{\emph{Speed}}
+\newcommand{\know}{\emph{Knowledge}}
+
+\newcommand{\takediementaldamage}[1]{Nehme #1 Würfel mentalen Schaden.}
+\newcommand{\takediephysicaldamage}[1]{Nehme #1 Würfel physischen Schaden.}
+\newcommand{\takediephysicalmentaldamage}[2]{Nehme #1 Würfel physischen und #2 Würfel mentalen Schaden.}
+
+\newcommand{\gainspeed}[1]{Erhalte #1 \speed}
+\newcommand{\gainmight}[1]{Erhalte #1 \might}
+\newcommand{\gainsanity}[1]{Erhalte #1 \sanity}
+\newcommand{\gainknow}[1]{Erhalte #1 \know}
+
+\newcommand{\loosespeed}[1]{Verliere #1 \speed}
+\newcommand{\loosemight}[1]{Verliere #1 \might}
+\newcommand{\loosesanity}[1]{Verliere #1 \sanity}
+\newcommand{\looseknow}[1]{Verliere #1 \know}
 
 \newcommand{\sanityroll}{\emph{Sanity}-Wurf}
 \newcommand{\mightroll}{\emph{Might}-Wurf}
 \newcommand{\speedroll}{\emph{Speed}-Wurf}
 \newcommand{\knowroll}{\emph{Knowledge}-Wurf}
+
+\newcommand{\chip}[2]{\emph{#1}-Chip (#2)}
+\newcommand{\chipe}[1]{\emph{#1}-Chip}
 
 \newcommand{\itemcards}{\emph{Item}-Karten}
 \newcommand{\itemcardd}{\emph{Item}-Karte}
@@ -108,6 +150,9 @@ Mache nun einen Spukwurf (Haunt).}
 
 \newcommand{\iroom}[2]{\item \room{#1}{#2}}
 
+
+\hyphenation{Pen-ta-gramm}
+
 \begin{document}
 
 \tableofcontents
@@ -122,22 +167,18 @@ Mache nun einen Spukwurf (Haunt).}
 \input{ROOMS}
 
 \twocolumn
-\section{Events / Ereignisse}
 
+\section{Events / Ereignisse}
 \input{EVENTS}
 
 \pagebreak
-\pagebreak
 
-\twocolumn
 \section{Omen}
-
 \input{OMEN}
 
 \pagebreak
 
 \section{Items / Gegenstände}
-
 \input{ITEMS}
 
 

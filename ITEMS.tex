@@ -29,7 +29,7 @@
 \itemcard{Armor}{Rüstung}{
     Es ist nur eine Requisite vom Renaissancefest, aber immerhin ist sie aus Metall.
 }{
-    Jedes Mal (nicht nur einmal pro Runde) wenn du physischen Schaden nimmst, erhälst du einen Schaden weniger.
+    Jedes Mal (nicht nur einmal pro Runde), wenn du physischen Schaden nimmst, erhälst du einen Schaden weniger.
 
     Dieser Gegenstand kann nicht gestohlen werden.
 }
@@ -40,7 +40,7 @@
 
     Sehr scharf.
 }{
-    Wenn du diese Waffe verwendest, kannst einen zu\-sätz\-lich\-en Würfel (bis maximal 8 Würfel) für einen \mightroll\ benutzen.
+    Wenn du diese Waffe verwendest, kannst einen zu\-sätz\-lich\-en Würfel (bis maximal 8 Würfel) für eine \might-Attacke benutzen.
 
     \nootherweapon
 }
@@ -66,18 +66,18 @@
 
     Eine fiese Waffe. Nadeln und Schläuche winden sich aus dem Griff und stechen direkt in deine Venen.
 }{
-    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might\ Attacke mit dieser Waffe ausführst. Du verlierst dabei 1 \speed.
+    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might-Attacke mit dieser Waffe ausführst. Du verlierst dabei 1 \speed.
 
     \nootherweapon
 
-    Du kannst diesen Dolch nicht handeln oder fallenlassen. Wenn er gestohlen wird, nimmst du 2 Schaden in \physicalsn.
+    Du kannst diesen Dolch nicht handeln oder fallenlassen. Wenn er gestohlen wird, nimmst du 2 Würfel physischen Schaden.
 }
 
 
 \itemcard{Bottle}{Flasche}{
     Ein trüber Flakon, in dem eine schwarze Flüssigkeit schwimmt.
 }{
-    Ist der \haunt\ offenbart, kannst du während deines Zuges aus der Flasche trinken. Würfle mit drei Würfeln:
+    Ist der \haunt\ offenbart, kannst du während deines Zuges aus der Flasche trinken. Würfle dazu mit drei Würfeln:
 
 
     \rolls
@@ -98,7 +98,7 @@
 }{
     Wenn du eine Ereigniskarte ziehst, darfst du jeden das Ereignis betreffenden Charakterwurf (Might, ...) mit einem zusätzlichen Würfel bestreiten.
 
-    Wenn du die Glocke (Bell), das Buch (Book) und die Kerze besitzt, erhalte +2 von jeder Eigenschaft (Might, ...). Sobald du einen dieser Gegenstände verlierst, verliere 2 von jeder Eigenschaft.
+    Wenn du die Glocke (Bell), das Buch (Book) und die Kerze besitzt, erhalte 2 von jeder Eigenschaft (Might, ...). Sobald du einen dieser Gegenstände verlierst, verliere 2 von jeder Eigenschaft.
 }
 
 \itemcard{Dark Dice}{Dunkle Würfel}{
@@ -106,24 +106,24 @@
 }{
     Einmal pro Runde kannst du 3 Würfel werfen:
     \rolls
-    \roll{6}{Gehe sofort zu irgendeinem Entdecker, aber nicht zum Verräter}
+    \roll{6}{Gehe sofort zu irgendeinem Entdecker, aber nicht zum Verräter.}
     \roll{5}{Verschiebe einen anderen Entdecker aus deinem Raum in einen angrenzenden Raum.}
-    \roll{4}{+1 \physical}
+    \roll{4}{Erhalte 1 in einer phsysischen Eigenschaft.}
     \roll{3}{Bewege dich ohne Bewegungskosten sofort in einen angrenzenden Raum.}
-    \roll{2}{+1 \mental}
+    \roll{2}{Erhalte 1 in einer mentalen Eigenschaft.}
     \roll{1}{Ziehe eine Ereigniskarte.}
-    \roll{0}{Reduziere alle deine Eigenschaften auf den ersten Schritt über dem Schädel und entferne die Karte aus dem Spiel.}
+    \roll{0}{Reduziere alle deine Eigenschaften auf den ersten Schritt über dem Schädel und entferne die die dunklen Würfel aus dem Spiel.}
     \erolls
 }
 
 \itemcard{Dynamite}{Dynamit}{
     Die Zündschnur brennt \emph{noch} nicht.
 }{
-    Anstatt zu Attakieren kannst du Dynamit durch eine Tür in einen benachbarten Raum werfen. Jeder Entdecker und jedes Monster mit Macht und Geschwindigkeitsmerkmalen in diesem Raum muss einen \speedroll\ versuchen:
+    Anstatt zu attakieren kannst du Dynamit durch eine Tür in einen benachbarten Raum werfen. Jeder Entdecker und jedes Monster mit Macht und Geschwindigkeitsmerkmalen in diesem Raum muss einen \speedroll\ versuchen:
 
     \rolls
-    \roll{5+}{Kein Schaden}
-    \roll{0-4}{Du nimmst 4 Schaden in \physicalsn}
+    \roll{5+}{Kein Schaden. Puh.}
+    \roll{0-4}{Du nimmst 4 Stufen physischen Schaden.}
     \erolls
 
     \discarditem
@@ -160,9 +160,9 @@
     Einmal pro Zug kannst du versuchen, dich oder einen anderen Entdecker im gleichen Raum mit einem Wissenswurf zu heilen.
 
     \rolls
-    \roll{8+}{+3 für \physicals}
-    \roll{6-7}{+2 für \physicals}
-    \roll{4-5}{+1 für eine \physical}
+    \roll{8+}{Erhalte 3 in physischen Eigenschaften}
+    \roll{6-7}{Erhalte 2 in physischen Eigenschaften}
+    \roll{4-5}{Erhalte 1 in einer physischen Eigenschaft}
     \roll{0-3}{Es passiert nichts.}
     \erolls
 
@@ -175,9 +175,9 @@
 }{
     Einmal pro Zug kannst du die Spieluhr öffnen oder schließen.
 
-    Während die Spieluhr offen ist, muss jeder Entdecker oder jedes Monster mit \emph{Sanity}-Merkmal, dass den Raum der Spieluhr betritt oder seinen Zug darin beginnt, einen \sanityroll\ werfen. Schafft er keine 4+, ist er/es für den Rest des Zuges hypnotisiert.
+    Während die Spieluhr offen ist, muss jeder Entdecker oder jedes Monster mit \emph{Sanity}-Merkmal, dass den Raum der Spieluhr betritt oder seinen Zug darin beginnt, einen \sanityroll\ werfen. Schafft er keine 4+, ist er/sie/es für den Rest des Zuges hypnotisiert.
 
-    Wenn ein Entdecker oder Monster, das die Spieluhr bei sich trägt, hypnotisiert wird, lässt er/es die Spieluhr fallen. Ist die Spieluhr währenddessen offen, bleibt sie offen.
+    Wenn ein Entdecker oder Monster, das die Spieluhr bei sich trägt, hypnotisiert wird, lässt er/\-sie/\-es die Spieluhr fallen. Ist die Spieluhr währ\-end\-des\-sen offen, bleibt sie offen.
 
 }
 
@@ -186,7 +186,7 @@
 }{
     Wenn du zusammen mit einem anderen Entdecker in einem Raum bist, kannst du ihm einen Gegenstand klauen.
 
-    \discarditem
+    Entferne die Diebeshandschuhe nach Verwendung aus dem Spiel.
 }
 
 
@@ -196,7 +196,7 @@
     Einmal pro Zug kannst du versuchen die Kiste mit einem \knowroll\ zu öffnen.
 
     \rolls
-    \roll{+6}{Du öffnest die Box. Ziehe zwei \itemcards\ und entferne die Schachtel aus dem Spiel.}
+    \roll{6+}{Du öffnest die Box. Ziehe zwei \itemcards\ und entferne die Schachtel aus dem Spiel.}
     \roll{0-5}{Du schaffst es nicht die Box zu öffnen.}
     \erolls
 }
@@ -227,12 +227,12 @@
 \itemcard{Sacrificial Dagger}{Opferdolch}{
     Ein gewundener Sporn aus Eisen, überzogen mit mysteriösen Symbolen und triefend vor Blut.
 }{
-    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might\ Attacke mit dieser Waffe ausführst, aber vorher musst du einen \knowroll werfen:
+    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might\ Attacke mit dieser Waffe ausführst, aber vorher musst du einen \knowroll\ werfen:
 
     \rolls
     \roll{6+}{Kein Effekt.}
-    \roll{3-5}{Nehme einen Schaden in einer \mental.}
-    \roll{0-2}{Der Dolch winded sich in deiner Hand. Nehme zwei Schaden in \physicalsn. Du kannst in diesem Zug nicht mehr angreifen.}
+    \roll{3-5}{Nehme 1 Schaden in einer mentalen Eigenschaft.}
+    \roll{0-2}{Der Dolch winded sich in deiner Hand. Nehme zwei Würfel Schaden in \physicalsn. Du kannst in diesem Zug nicht mehr angreifen.}
     \erolls
 }
 
@@ -240,7 +240,7 @@
 \itemcard{Smelling Salts}{Riechsalz}{
     Wow, das haut rein.
 }{
-    Du kannst dir oder einen anderen lebenden Entdecker im selben Raum das Riechsalz unter die Nase halten. Hebe den Wissenswert (Knowledge) des entsprechenden Entdeckers auf seinen Startwert an.
+    Du kannst dir oder einem anderen lebenden Entdecker im selben Raum das Riechsalz unter die Nase halten. Hebe den Wissenswert (Knowledge) des entsprechenden Entdeckers auf seinen Startwert an.
 
     \discarditem
 }
