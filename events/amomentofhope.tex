@@ -120,7 +120,7 @@
 
     \rolls
     \roll{4}{Du und der nächstgelegene Entdecker erhalten 1 \might.}
-    \roll{3}{Du erhälst 1 \might\ und der nächstgelegene Entdecker verliert 1 \sanity.}
+    \roll{3}{Du erhälst 1 \might\ und der nächst\-ge\-le\-ge\-ne Entdecker verliert 1 \sanity.}
     \roll{2}{Nehme 1 \sanity\ Schaden.}
     \roll{1}{Nehme 1 \speed\ Schaden.}
     \roll{0}{Jeder Entdecker verliert eine Stufe einer Charaktereigenschaft (Might, ...) seiner Wahl.}
@@ -306,6 +306,237 @@
     Du musst eine Charaktereigenschaft auswählen und für diese einen Wurf versuchen:
     \rolls
     \roll{4+}{Du widerstehst den Verlockungen des Schattens. Erhalte 1 in einem Charakterwert deiner Wahl.}
-    \roll{0-3}{Der Schatten zerrt von deiner Energie. Die ausgewählte Eigenschaft sinkt auf ihren niedrigsten Wert. (Nicht der Schädel.) Wenn die Eigenschaft schon auf ihrem niedrigsten Wert liegt, erniedrige eine andere Eigenschaft. }
+    \roll{0-3}{Der Schatten zerrt von deiner Energie. Die ausgewählte Eigenschaft sinkt auf ihren niedrigsten Wert über dem Schädel. Wenn die Eigenschaft schon auf ihrem niedrigsten Wert liegt, erniedrige eine andere Eigenschaft. }
     \erolls
+}
+
+\event{Revolving Wall}{Drehende Wand}{
+    Die Wand deht sich an eine andere Stelle.
+}{
+    Lege den Wall-Switch-Chip (Wandschalter) an eine Wand ohne Ausgang oder an eine Ecke in diesem Raum. Wenn es keinen Raum auf der anderen Seite des Wandschalters gibt, ziehe Raumkarten, bis du eine für das entsprechende Stockwerk gefunden hast und lege sie an. (Wenn es für das Stockwerk keine Karten  mehr gibt, nehme diese Karte aus dem Spiel.) Tritt in den Raum ein.
+
+    Einmal während des Zuges eines Entdeckers, wenn sich dieser in einem der beiden vom Wandschalter berührten Räume befindet, kann er/sie einen \knowroll\ versuchen, um den Wandschalter umzulegen:
+
+    \rolls
+    \roll{3+}{Der Entdecker findet den versteckten Hebel und geht durch den Durchgang. Dies zählt nicht als Bewegung.}
+    \roll{0-2}{Der Entdecker kann den versteckten Hebel nicht finden und den Durchgang nicht passieren.}
+    \erolls
+}
+
+
+\event{Rotten}{Verrottet}{
+    Der Gestank in diesem Zimmer ist schrecklich.
+
+    Es riecht nach Tod, wie Blut.
+
+    Ein Schlachthausgeruch.
+}{
+    Du musst einen \sanityroll versuchen:
+    \rolls
+    \roll{5+}{Verwirrende Gerüche, mehr nicht. Erhalte 1 \sanity.}
+    \roll{2-4}{Verliere 1 \might.}
+    \roll{1}{Nehme 1 \might\ und 1 \speed\ Schaden.}
+    \roll{0}{Du krümmst dich vor Übelkeit. Verliere 1 von jeder Charaktereigenschaft.}
+    \erolls
+}
+
+\event{Secret Passage}{Geheimgang}{
+    Ein Bereich der Wand fährt zur Seite. Dahinter erstreckt sich ein modriger Tunnel.
+}{
+    Lege einen \emph{Secret Passage}-Chip in diesen Raum. Würfle mit 3 Würfeln und lege den zweiten \emph{Secret Passage}-Chip in:
+
+    \rolls
+    \roll{6}{Irgendeinen schon existierenden Raum.}
+    \roll{4-5}{Einen existierenden Raum im oberen Stockwerk.}
+    \roll{2-3}{Einen existierenden Raum im Erdgeschoss.}
+    \roll{0-1}{Einen existierenden Kellerraum.}
+    \erolls
+
+    Du kannst nun den Geheimgang nutzen, auch wenn du keine Bewegung mehr übrig hast.
+
+    Die Benutzung des Geheimgangs zählt als eine Bewegung. Der Geheimgang selbst zählt aber nicht als Feld.
+
+    Ab jetzt kann jeder Entdecker den Geheimgang nutzen. Ein Entdecker kann seinen Zug nicht im Geheimgang beenden.
+}
+
+
+
+\event{Secret Stairs}{Geheimtreppe}{
+    Ein schreckliches Knarzen hallt umher. Du hast eine geheime Treppe entdeckt.
+}{
+    Lege einen \emph{Secret Stairs}-Chip (Geheimtreppe) in diesen Raum und einen zweiten \emph{Secret Stairs}-Chip in einen anderen existierenden Raum auf einem anderen Stockwerk. Das verwenden der Geheimtreppe zählt als Bewegung. Die Treppe selbst zählt jedoch nicht als Feld.
+
+    Du kannst den Treppen jetzt folgen, auch wenn du keine Bewegung mehr übrig hast. Wenn du ihnen jetzt folgst, ziehe eine \eventcard\ im nächsten Raum.
+}
+
+\event{Shrieking Wind}{Kreischender Wind}{
+    Ein Wind zieht durchs Haus, ein langsames Crescendo hin zu einem kreischenden Heulen.
+}{
+    Jeder Spieler im Garten, auf dem Friedhof, in der Patio, auf dem Turm, auf dem Balkon (Garden, Graveyard, Patio, Tower or Balcony) oder einem Raum mit einem nach draußen führenden Fenster muss einen \mightroll\ versuchen:
+
+    \rolls
+    \roll{5+}{Du bleibst auf den Füßen.}
+    \roll{3-4}{Der Wind wirft dich um. Nehme einen Würfel physischen Schaden.}
+    \roll{1-2}{Der Wind kühlt deine Seele aus. Nehme einen Würfel mentalen Schaden.}
+    \roll{0}{Der Wind wirft dich derb um. Nehme einen Würfel physischen Schaden. Lege einen deiner Gegenstände (wenn du welche hast) in die Eingangshalle (Entrance Hall).}
+    \erolls
+
+    Jedes Ergebnis betrifft nur den Entdecker, der würfelt.
+}
+
+
+\event{Silence}{Stille}{
+    Im Kellergewölbe wird plötzlich alles Still. Auch das Geräusch des eigenen Atems verstummt.
+}{
+    Jeder Entdecker im Keller (Basement) muss einen \sanityroll\ versuchen:
+
+    \rolls
+    \roll{4+}{Du wartest ruhig bis dein Hörsinn zurückkehrt.}
+    \roll{1-3}{Du schreist einen tonlosen Schrei. Nehme einen Würfel mentalen Schaden. }
+    \roll{0}{Du rastest aus. Nehme zwei Würfel mentalen Schaden.}
+    \erolls
+
+    Jedes Ergebnis betrifft nur den Entdecker, der würfelt.
+}
+
+\event{Skeletons}{Gerippe}{
+    Mutter und Kind, sich immer noch umarmend.
+}{
+    Lege einen \emph{Skeleton}-Chip (Skelett) in diesen Raum. Nehme einen Würfel mentalen Schaden.
+
+    Einmal während seines Zuges kann ein Entdecker einen \sanityroll versuchen, um die Skelette zu durchsuchen.
+
+    \rolls
+    \roll{5+}{Ziehe eine \itemcardd. Entferne den \emph{Skeleton}-Chip.}
+    \roll{0-4}{Du stocherst herum, findest jedoch nichts. Nehme einen Würfel mentalen Schaden.}
+    \erolls
+
+    Jedes Ergebnis betrifft nur den Entdecker, der würfelt.
+}
+
+\event{Smoke}{Rauch}{
+    Rauch wabert um dich herum. Du hustest während du dir Tränen aus den Augen wischt.
+}{
+    Lege den \emph{Smoke}-Chip (Rauch) in den Raum. Der Rauch blockiert die Sichtlinie von angrenzenden Räumen. Ein Entdecker würfelt mit zwei Würfeln weniger (aber mindestens mit einem Würfel) bei allen Charakterwürfen, während er sich in diesem Zimmer aufhält.
+}
+
+
+\event{Something Hidden}{Etwas Verstecktes}{
+    Dieser Raum ist sonderbar, aber weshalb? Es liegt dir fast auf der Zunge.
+}{
+    Wenn du herausfinden willst, was seltsam ist, versuche einen \knowroll:
+    \rolls
+    \roll{4+}{Eine Sektion der Wand schiebt sich seitwärts, eine Nische preisgebend. Ziehe eine \itemcardd.}
+    \roll{0-3}{Du kannst es einfach nicht herausfinden, was dich ein wenig verrückt macht. Verliere 1 \sanity.}
+    \erolls
+}
+
+\event{Something Slimy}{Etwas Schleimiges}{
+    Was ist das an deiner Ferse?
+
+    Ein Insekt? Eine Tentakel?
+
+    Eine um sich greifende tote Hand?
+}{
+    Du musst einen \speedroll\ versuchen:
+
+    \rolls
+       \roll{4+}{Du kommst frei. Erhalte 1 \speed.}
+       \roll{1-3}{Nehme 1 \might\ Schaden.}
+       \roll{0}{Nehme 1 \might\ und 1 \speed\ Schaden.}
+       \erolls
+}
+
+\event{Spider}{Spinne}{
+    Eine faustgroße Spinne landet auf deiner Schulter ... und klettert in deine Haare.
+}{
+    Du musst einen \speedroll\ versuchen um sie wegzuwischen oder einen \sanityroll\ um still zu halten.
+
+    \rolls
+    \roll{4+}{Sie ist weg. Erhalte 1 in der Eigenschaft, die du für den Wurf benutzt hast.}
+    \roll{1-3}{Sie beißt dich. Nehme einen Würfel physischen Schaden.}
+    \roll{0}{Sie beißt ein Stück Fleisch aus dir heraus. Nehme 2 Würfel physischen Schaden.}
+    \erolls
+}
+
+\event{The Beckoning}{Der Lockruf}{
+    Draußen.
+
+    Du musst nach draußen gehen.
+
+    In die Freiheit fliegen!
+}{
+    Jeder Entdecker im Garten, auf dem Friedhof, in der Patio, auf dem Turm, auf dem Balkon (Garden, Graveyard, Patio, Tower or Balcony) oder einem Raum mit einem nach draußen führenden Fenster muss einen \sanityroll\ versuchen:
+
+    \rolls
+    \roll{3+}{Du trittst vom Sims zurück.}
+    \roll{0-2}{Du springst in die Patio. (Wenn sie sich nicht im Haus befindet, durchsuche den Zimmerstapel danach, lege sie an und mische die Karten.) Setze deine Figur in die Patio und erleide einen Würfel physischen Schaden.}
+    \erolls
+
+    Jedes Ergebnis betrifft nur den Entdecker, der den jeweiligen Wurf warf.
+}
+
+\event{The Lost One}{Die Verlorene}{
+    Eine Frau in Kleidern aus der Zeit des Bürgerkriegs winkt dich herbei. Du fällst in Trance.
+}{
+    Du musst einen \knowroll\ versuchen. Wenn du mehr als 5 würfelst, entkommst du der Trance und erhälst 1 \know. Andernfalls würfle mit drei Würfeln um zu erkennen, wohin dich die Verlorene führt.
+
+    \rolls
+    \roll{6}{Versetze deinen Entdecker in die Eingangshalle (Entrance Hall).}
+    \roll{4-5}{Versetze deine Figur an die Treppe im ersten Stock (Upper Landing).}
+    \roll{2-3}{Ziehe Zimmerkarten, bis du eine Karte für den ersten Stock findest.}
+    \roll{0-1}{Ziehe Zimmerkarten, bis du einen Kellerraum findest.}
+    \erolls
+
+    Wenn du für dieses Ereignis eine Zimmerkarte ziehen musstest, lege diese Karte an und setze deinen Entdecker hinein. Findest du keine Zimmerkarte für das gewürfelte Stockwerk, versetze deine Figur in die Eingangshalle.
+}
+
+
+\event{The Voice}{Die Stimme}{
+    ``Ich bin unter dem Boden, begraben unter dem Boden ...''
+
+    Die Stimme wispert und verschwindet.
+}{
+    Du musst einen \knowroll\ versuchen:
+    \rolls
+    \roll{4+}{Du findest etwas unter dem Boden. Ziehe eine \itemcardd.}
+    \roll{0-3}{Du gräbst und suchst nach der Stimme, aber vergebens.}
+    \erolls
+}
+
+\event{The Walls}{Die Wände}{
+    Dieser Raum ist warm.
+
+    Wände aus Fleisch pulsieren in einem beständigen Herzschlag. Dein eigenes Herz schägt im Takt mit dem Haus. Du wirst in die Wände gezogen ... und bricht anderswo wieder heraus.
+}{
+    Du musst eine Zimmerkarte ziehen und anlegen. Versetze deinen Entdecker in den neuen Raum.
+}
+
+\event{Webs}{Spinnenweben}{
+    Beiläufig hebst du deinen Arm um einige Spinnenweben beiseite zu wischen ... aber sie wollen sich nicht wegschieben lassen. Sie kleben.
+}{
+    Du musst einen \mightroll\ versuchen:
+    \rolls
+    \roll{4+}{Du kommst frei. Erhalte 1 \might\ und lege diese Karte aus dem Spiel.}
+    \roll{0-3}{Du steckst fest. Behalte diese Karte.}
+    \erolls
+
+    Steckst du fest, kannst du nichts machen, bis du befreit bist. Einmal pro Zug kann ein Entdecker einen \mightroll\ versuchen, um dich zu befreien. (Du kannst diesen Wurf ebenfalls versuchen.) 4+ befreit, aber du erhälst keinen \emph{Might}-Bonus. Jeder, der es nicht schafft dich zu befreien, kann sich für den Rest seines Zuges nicht bewegen. Nach drei erfolglosen Versuchen kannst du dich automatisch in deinem nächsten Zug befreien und diesen Zug normal spielen.
+
+    Lege diese Karte aus dem Spiel, sobald du dich befreit hast.
+}
+
+
+\event{What The ... ?}{Was zum ... ?}{
+    Als du den Weg zurückblickst, den du gekommen bist, siehst du ... nichts.
+
+    Nur dichter Nebel und Dunst wo eben noch ein Raum war.
+}{
+    Nehme die Zimmerkachel, auf der du stehst (nachdem du alles andere beiseite geräumt hast) und setze sie an anderer Stelle im selben Stockwerk wieder an, sodass die Tür an eine bisher unentdeckte Tür anschließt (und setze alles wieder darauf was du weggeräumt hast). Wenn es keinen unentdeckten Durchgang auf diesem Stockwerk gibt, versetze das Zimmer in ein anderes Stockwerk.
+}
+
+\event{Whoops!}{Hoppla!}{
+    Du fühlst einen Körper an deinen Füßen. Bevor du einen Schritt zurücktreten kannst, wirst du umgestoßen. Eine kichernde Stimme rennt davon.
+}{
+    Nehme alle deine \itemcards\ (keine \omencards) und mische sie. Der Spieler zu deiner Rechten zieht zufällig eine davon und legt sie aus dem Spiel. Dann lege deine \itemcards\ wieder offen hin.
 }

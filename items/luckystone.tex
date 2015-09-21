@@ -1,67 +1,20 @@
 
 
-\itemcard{Lucky Stone}{Glücksstein}{
-    Ein glattes, gewöhnlich aussehendes Stück Felsgestein. Du fühlst, dass er dir Glück bringen wird.
-}{
-    Nachdem du gewürfelt hast, kannst du an diesem Stein reiben, um einen oder mehrere deiner Würfel nocheinmal zu würfeln.
-
-    \discarditem
-}
-
-\itemcard{Dark Dice}{Dunkle Würfel}{
-    Wie stehts um dein Glück?
-}{
-    Einmal pro Runde kannst du 3 Würfel werfen:
-    \rolls
-    \roll{6}{Gehe sofort zu irgendeinem Entdecker, aber nicht zum Verräter}
-    \roll{5}{Verschiebe einen anderen Entdecker aus deinem Raum in einen angrenzenden Raum.}
-    \roll{4}{+1 \physical}
-    \roll{3}{Bewege dich ohne Bewegungskosten sofort in einen angrenzenden Raum.}
-    \roll{2}{+1 \mental}
-    \roll{1}{Ziehe eine Ereigniskarte.}
-    \roll{0}{Reduziere alle deine Eigenschaften auf den ersten Schritt über dem Schädel und entferne die Karte aus dem Spiel.}
-    \erolls
-}
-
-
-\itemcard{Medical Kit}{Medizintasche}{
-    Ein Arztkoffer, aber die wichtigsten Medikamente sind schon geplündert worden.
-}{
-    Einmal pro Zug kannst du versuchen, dich oder einen anderen Entdecker im gleichen Raum mit einem Wissenswurf zu heilen.
-
-    \rolls
-    \roll{8+}{+3 für \physicals}
-    \roll{6-7}{+2 für \physicals}
-    \roll{4-5}{+1 für eine \physical}
-    \roll{0-3}{Es passiert nichts.}
-    \erolls
-
-    Du kannst eine Eigenschaft maximal bis zu ihrem Startwert heilen.
-}
-
-\itemcard{Idol}{Idol}{
-    Vielleicht hat es dich für einen höheren Zweck auserwählt. Möglicherweise Menschenopfer.
-}{
-    Einmal pro Zug kannst du an dem Idol reiben, bevor du einen Charakter-, Kampf- oder Ereigniswurf würfelst, um 2 zusätzliche Würfel (bis maximal 8 Würfel) einzusetzen. Jedes mal verlierst du 1 \sanity.
-
-}
-
-\itemcard{Axe}{Akt}{
-    WAFFE
-
-    Sehr scharf.
-}{
-    Wenn du diese Waffe verwendest, kannst einen zusätzlichen Würfel (bis maximal 8 Würfel) für einen \mightroll\ benutzen.
-
-    \nootherweapon
-}
-
 \itemcard{Adrenaline Shot}{Adrenalinespritze}{
     Eine Spritze, die eine seltsame, fluosziierende Flüssigkeit enthält.
 }{
     Du kannst diesen Gegensstand einsetzen, bevor du einen Charakterwurf würfelst, um zum Wurfergebnis 4 hinzuzufügen.
 
     \discarditem
+}
+
+
+\itemcard{Amulet Of The Ages}{Amulett der Zeitalter}{
+    Altes Silber und eingelassene Juwelen, Inschriften von Segnungen.
+}{
+    Erhalte sofort 1 von jeder Eigenschaft.
+
+    Verliere 3 von jeder Eigenschaft, wenn du das Amulett verlierst.
 }
 
 \itemcard{Angel Feather}{Engelsfeder}{
@@ -72,69 +25,24 @@
     \discarditem
 }
 
-\itemcard{Dynamite}{Dynamit}{
-    Die Zündschnur brennt \emph{noch} nicht.
+
+\itemcard{Armor}{Rüstung}{
+    Es ist nur eine Requisite vom Renaissancefest, aber immerhin ist sie aus Metall.
 }{
-    Anstatt zu Attakieren kannst du Dynamit durch eine Tür in einen benachbarten Raum werfen. Jeder Entdecker und jedes Monster mit Macht und Geschwindigkeitsmerkmalen in diesem Raum muss einen \speedroll\ versuchen:
+    Jedes Mal (nicht nur einmal pro Runde) wenn du physischen Schaden nimmst, erhälst du einen Schaden weniger.
 
-    \rolls
-    \roll{5+}{Kein Schaden}
-    \roll{0-4}{Du nimmst 4 Schaden in \physicalsn}
-    \erolls
-
-    \discarditem
+    Dieser Gegenstand kann nicht gestohlen werden.
 }
 
-\itemcard{Pickpocket's Gloves}{Handschuhe des Diebes}{
-    Sich selbst zu helfen war noch nie so einfach.
-}{
-    Wenn du zusammen mit einem anderen Entdecker in einem Raum bist, kannst du ihm einen Gegenstand klauen.
 
-    \discarditem
-}
-
-\itemcard{Revolver}{Revolver}{
+\itemcard{Axe}{Axt}{
     WAFFE
 
-    Eine alte, wirksam scheinende Waffe.
+    Sehr scharf.
 }{
-    Du kannst den Revolver verwenden, um mit einem \speedroll\ anstelle eines \mightroll s anzugreifen. (Dein Gegner verteidigt sich dann mit \speed\ und nimmt physischen Schaden.)
-
-    Würfle mit einem zusätzlichen Würfel bei deinem Angriffswurf.
-
-    Mit dem Revolver kannst du im gleichen Raum oder in gerader Sichtlinie durch mehrere Türen treffen. Wenn du jemanden in einem anderen Raum angreifst, nimmst du im Falle einer Niederlage keinen Schaden.
-
-     \nootherweapon
-
-}
-
-\itemcard{Rabbit's Foot}{Hasenfuß}{
-    Der Hase hatte wohl kein Glück.
-}{
-    Einmal pro Zug kannst du \emph{einen} Würfel erneut werfen. Der zweite Wurf zählt.
-}
-
-\itemcard{Puzzle Box}{Rätsel-Schachtel}{
-    Irgendwie muss man die doch öffnen können.
-}{
-    Einmal pro Zug kannst du versuchen die Kiste mit einem \knowroll\ zu öffnen.
-
-    \rolls
-    \roll{+6}{Du öffnest die Box. Ziehe zwei \itemcards\ und entferne die Schachtel aus dem Spiel.}
-    \roll{0-5}{Du schaffst es nicht die Box zu öffnen.}
-    \erolls
-}
-
-\itemcard{Blood Dagger}{Blutdolch}{
-    WAFFE
-
-    Eine fiese Waffe. Nadeln und Schläuche winden sich aus dem Griff und stechen direkt in deine Venen.
-}{
-    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might\ Attacke mit dieser Waffe ausführst. Du verlierst dabei 1 \speed.
+    Wenn du diese Waffe verwendest, kannst einen zu\-sätz\-lich\-en Würfel (bis maximal 8 Würfel) für einen \mightroll\ benutzen.
 
     \nootherweapon
-
-    Du kannst diesen Dolch nicht handeln oder fallenlassen. Wenn er gestohlen wird, nimmst du 2 Schaden in \physicalsn.
 }
 
 
@@ -153,63 +61,18 @@
     \erolls
 }
 
+\itemcard{Blood Dagger}{Blutdolch}{
+    WAFFE
 
-\itemcard{Armor}{Rüstung}{
-    Es ist nur eine Requisite vom Renaissancefest, aber immerhin ist sie aus Metall.
+    Eine fiese Waffe. Nadeln und Schläuche winden sich aus dem Griff und stechen direkt in deine Venen.
 }{
-    Jedes Mal (nicht nur einmal pro Runde) wenn du physischen Schaden nimmst, erhälst du einen Schaden weniger.
+    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might\ Attacke mit dieser Waffe ausführst. Du verlierst dabei 1 \speed.
 
-    Dieser Gegenstand kann nicht gestohlen werden.
+    \nootherweapon
+
+    Du kannst diesen Dolch nicht handeln oder fallenlassen. Wenn er gestohlen wird, nimmst du 2 Schaden in \physicalsn.
 }
 
-\itemcard{Music Box}{Spieluhr}{
-    Eine handgefertigte Antiquität. Sie spielt eine gespenstische Melodie, die dir nicht mehr aus dem Kopf geht.
-}{
-    Einmal pro Zug kannst du die Spieluhr öffnen oder schließen.
-
-    Während die Spieluhr offen ist, muss jeder Entdecker oder jedes Monster mit \emph{Sanity}-Merkmal, dass den Raum der Spieluhr betritt oder seinen Zug darin beginnt, einen \sanityroll\ werfen. Schafft er keine 4+, ist er/es für den Rest des Zuges hypnotisiert.
-
-    Wenn ein Entdecker oder Monster, das die Spieluhr bei sich trägt, hypnotisiert wird, lässt er/es die Spieluhr fallen. Ist die Spieluhr währenddessen offen, bleibt sie offen.
-
-}
-
-\itemcard{Healing Salve}{Heilsalbe}{
-    Eine klebrige Paste in einer flachen Schale.
-}{
-    Du kannst dich oder einen anderen lebenden Entdecker im selben Raum mit dieser Salbe behandeln. Hebe entweder den \might\ oder den Geschwindigkeitswert (Speed) des geheilten Entdeckers auf seinen Startwert an.
-
-    \discarditem
-}
-
-
-\itemcard{Smelling Salts}{Riechsalz}{
-    Wow, das haut rein.
-}{
-    Du kannst dir oder einen anderen lebenden Entdecker im selben Raum das Riechsalz unter die Nase halten. Hebe den Wissenswert (Knowledge) des entsprechenden Entdeckers auf seinen Startwert an.
-
-    \discarditem
-}
-
-
-\itemcard{Sacrificial Dagger}{Opferdolch}{
-    Ein gewundener Sporn aus Eisen, überzogen mit mysteriösen Symbolen und triefend vor Blut.
-}{
-    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might\ Attacke mit dieser Waffe ausführst, aber vorher musst du einen \knowroll werfen:
-
-    \rolls
-    \roll{6+}{Kein Effekt.}
-    \roll{3-5}{Nehme einen Schaden in einer \mental.}
-    \roll{0-2}{Der Dolch winded sich in deiner Hand. Nehme zwei Schaden in \physicalsn. Du kannst in diesem Zug nicht mehr angreifen.}
-    \erolls
-}
-
-\itemcard{CANDLE}{Kerze}{
-    Sie lässt die Schatten tanzen - wenigstens hoffst du sie macht genau das.
-}{
-    Wenn du eine Ereigniskarte ziehst, darfst du jeden das Ereignis betreffenden Charakterwurf (Might, ...) mit einem zusätzlichen Würfel bestreiten.
-
-    Wenn du die Glocke (Bell), das Buch (Book) und die Kerze besitzt, erhalte +2 von jeder Eigenschaft (Might, ...). Sobald du einen dieser Gegenstände verlierst, verliere 2 von jeder Eigenschaft.
-}
 
 \itemcard{Bottle}{Flasche}{
     Ein trüber Flakon, in dem eine schwarze Flüssigkeit schwimmt.
@@ -228,10 +91,157 @@
     \erolls
 }
 
-\itemcard{Amulet Of The Ages}{Amulett der Zeitalter}{
-    Altes Silber und eingelassene Juwelen, Inschriften von Segnungen.
-}{
-    Erhalte sofort 1 von jeder Eigenschaft.
 
-    Verliere 3 von jeder Eigenschaft, wenn du das Amulett verlierst.
+
+\itemcard{Candle}{Kerze}{
+    Sie lässt die Schatten tanzen - wenigstens hoffst du sie macht genau das.
+}{
+    Wenn du eine Ereigniskarte ziehst, darfst du jeden das Ereignis betreffenden Charakterwurf (Might, ...) mit einem zusätzlichen Würfel bestreiten.
+
+    Wenn du die Glocke (Bell), das Buch (Book) und die Kerze besitzt, erhalte +2 von jeder Eigenschaft (Might, ...). Sobald du einen dieser Gegenstände verlierst, verliere 2 von jeder Eigenschaft.
 }
+
+\itemcard{Dark Dice}{Dunkle Würfel}{
+    Wie stehts um dein Glück?
+}{
+    Einmal pro Runde kannst du 3 Würfel werfen:
+    \rolls
+    \roll{6}{Gehe sofort zu irgendeinem Entdecker, aber nicht zum Verräter}
+    \roll{5}{Verschiebe einen anderen Entdecker aus deinem Raum in einen angrenzenden Raum.}
+    \roll{4}{+1 \physical}
+    \roll{3}{Bewege dich ohne Bewegungskosten sofort in einen angrenzenden Raum.}
+    \roll{2}{+1 \mental}
+    \roll{1}{Ziehe eine Ereigniskarte.}
+    \roll{0}{Reduziere alle deine Eigenschaften auf den ersten Schritt über dem Schädel und entferne die Karte aus dem Spiel.}
+    \erolls
+}
+
+\itemcard{Dynamite}{Dynamit}{
+    Die Zündschnur brennt \emph{noch} nicht.
+}{
+    Anstatt zu Attakieren kannst du Dynamit durch eine Tür in einen benachbarten Raum werfen. Jeder Entdecker und jedes Monster mit Macht und Geschwindigkeitsmerkmalen in diesem Raum muss einen \speedroll\ versuchen:
+
+    \rolls
+    \roll{5+}{Kein Schaden}
+    \roll{0-4}{Du nimmst 4 Schaden in \physicalsn}
+    \erolls
+
+    \discarditem
+}
+
+\itemcard{Healing Salve}{Heilsalbe}{
+    Eine klebrige Paste in einer flachen Schale.
+}{
+    Du kannst dich oder einen anderen lebenden Entdecker im selben Raum mit dieser Salbe behandeln. Hebe entweder den \might\ oder den Geschwindigkeitswert (Speed) des geheilten Entdeckers auf seinen Startwert an.
+
+    \discarditem
+}
+
+\itemcard{Idol}{Idol}{
+    Vielleicht hat es dich für einen höheren Zweck auserwählt. Möglicherweise Menschenopfer.
+}{
+    Einmal pro Zug kannst du an dem Idol reiben, bevor du einen Charakter-, Kampf- oder Ereigniswurf würfelst, um 2 zusätzliche Würfel (bis maximal 8 Würfel) einzusetzen. Jedes mal verlierst du 1 \sanity.
+
+}
+
+\itemcard{Lucky Stone}{Glücksstein}{
+    Ein glattes, gewöhnlich aussehendes Stück Felsgestein. Du fühlst, dass er dir Glück bringen wird.
+}{
+    Nachdem du gewürfelt hast, kannst du an diesem Stein reiben, um einen oder mehrere deiner Würfel nocheinmal zu würfeln.
+
+    \discarditem
+}
+
+
+
+\itemcard{Medical Kit}{Medizintasche}{
+    Ein Arztkoffer, aber die wichtigsten Medikamente sind schon geplündert worden.
+}{
+    Einmal pro Zug kannst du versuchen, dich oder einen anderen Entdecker im gleichen Raum mit einem Wissenswurf zu heilen.
+
+    \rolls
+    \roll{8+}{+3 für \physicals}
+    \roll{6-7}{+2 für \physicals}
+    \roll{4-5}{+1 für eine \physical}
+    \roll{0-3}{Es passiert nichts.}
+    \erolls
+
+    Du kannst eine Eigenschaft maximal bis zu ihrem Startwert heilen.
+}
+
+
+\itemcard{Music Box}{Spieluhr}{
+    Eine handgefertigte Antiquität. Sie spielt eine gespenstische Melodie, die dir nicht mehr aus dem Kopf geht.
+}{
+    Einmal pro Zug kannst du die Spieluhr öffnen oder schließen.
+
+    Während die Spieluhr offen ist, muss jeder Entdecker oder jedes Monster mit \emph{Sanity}-Merkmal, dass den Raum der Spieluhr betritt oder seinen Zug darin beginnt, einen \sanityroll\ werfen. Schafft er keine 4+, ist er/es für den Rest des Zuges hypnotisiert.
+
+    Wenn ein Entdecker oder Monster, das die Spieluhr bei sich trägt, hypnotisiert wird, lässt er/es die Spieluhr fallen. Ist die Spieluhr währenddessen offen, bleibt sie offen.
+
+}
+
+\itemcard{Pickpocket's Gloves}{Handschuhe des Diebes}{
+    Sich selbst zu helfen war noch nie so einfach.
+}{
+    Wenn du zusammen mit einem anderen Entdecker in einem Raum bist, kannst du ihm einen Gegenstand klauen.
+
+    \discarditem
+}
+
+
+\itemcard{Puzzle Box}{Rätsel-Schachtel}{
+    Irgendwie muss man die doch öffnen können.
+}{
+    Einmal pro Zug kannst du versuchen die Kiste mit einem \knowroll\ zu öffnen.
+
+    \rolls
+    \roll{+6}{Du öffnest die Box. Ziehe zwei \itemcards\ und entferne die Schachtel aus dem Spiel.}
+    \roll{0-5}{Du schaffst es nicht die Box zu öffnen.}
+    \erolls
+}
+
+\itemcard{Rabbit's Foot}{Hasenfuß}{
+    Der Hase hatte wohl kein Glück.
+}{
+    Einmal pro Zug kannst du \emph{einen} Würfel erneut werfen. Der zweite Wurf zählt.
+}
+
+\itemcard{Revolver}{Revolver}{
+    WAFFE
+
+    Eine alte, wirksam scheinende Waffe.
+}{
+    Du kannst den Revolver verwenden, um mit einem \speedroll\ anstelle eines \mightroll s anzugreifen. (Dein Gegner verteidigt sich dann mit \speed\ und nimmt physischen Schaden.)
+
+    Würfle mit einem zusätzlichen Würfel bei deinem Angriffswurf.
+
+    Mit dem Revolver kannst du im gleichen Raum oder in gerader Sichtlinie durch mehrere Türen treffen. Wenn du jemanden in einem anderen Raum angreifst, nimmst du im Falle einer Niederlage keinen Schaden.
+
+     \nootherweapon
+
+}
+
+
+
+\itemcard{Sacrificial Dagger}{Opferdolch}{
+    Ein gewundener Sporn aus Eisen, überzogen mit mysteriösen Symbolen und triefend vor Blut.
+}{
+    Du kannst drei zusätzliche Würfel (bis maximal 8 Würfel) werfen, wenn du eine \might\ Attacke mit dieser Waffe ausführst, aber vorher musst du einen \knowroll werfen:
+
+    \rolls
+    \roll{6+}{Kein Effekt.}
+    \roll{3-5}{Nehme einen Schaden in einer \mental.}
+    \roll{0-2}{Der Dolch winded sich in deiner Hand. Nehme zwei Schaden in \physicalsn. Du kannst in diesem Zug nicht mehr angreifen.}
+    \erolls
+}
+
+
+\itemcard{Smelling Salts}{Riechsalz}{
+    Wow, das haut rein.
+}{
+    Du kannst dir oder einen anderen lebenden Entdecker im selben Raum das Riechsalz unter die Nase halten. Hebe den Wissenswert (Knowledge) des entsprechenden Entdeckers auf seinen Startwert an.
+
+    \discarditem
+}
+

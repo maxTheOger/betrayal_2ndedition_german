@@ -14,42 +14,21 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[11pt]{article}
+\documentclass[10pt,a4paper,oneside,ngerman]{article}
+
+\usepackage[ngerman]{babel}
 
 \usepackage[margin=1in]{geometry} % Required to make the margins smaller to fit more content on each page
-\usepackage[linkcolor=blue]{hyperref} % Required to create hyperlinks to questions from elsewhere in the document
-\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue} % Specify a color for hyperlinks
-\usepackage{todonotes} % Required for the boxes that questions appear in
-\usepackage{tocloft} % Required to give customize the table of contents to display questions
+%\usepackage[linkcolor=blue]{hyperref} % Required to create hyperlinks to questions from elsewhere in the document
+%\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue} % Specify a color for hyperlinks
+%\usepackage{todonotes} % Required for the boxes that questions appear in
+%\usepackage{tocloft} % Required to give customize the table of contents to display questions
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
-\usepackage{palatino} % Use the Palatino font
+%\usepackage{palatino} % Use the Palatino font
 \usepackage[utf8]{inputenc}
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
-% Create and define the list of questions
-\newlistof{questions}{faq}{\large List of Frequently Asked Questions} % This creates a new table of contents-like environment that will output a file with extension .faq
-\setlength\cftbeforefaqtitleskip{4em} % Adjusts the vertical space between the title and subtitle
-\setlength\cftafterfaqtitleskip{1em} % Adjusts the vertical space between the subtitle and the first question
-\setlength\cftparskip{.3em} % Adjusts the vertical space between questions in the list of questions
-
-% Create the command used for questions
-\newcommand{\question}[1] % This is what you will use to create a new question
-{
-\refstepcounter{questions} % Increases the questions counter, this can be referenced anywhere with \thequestions
-\par\noindent % Creates a new unindented paragraph
-\phantomsection % Needed for hyperref compatibility with the \addcontensline command
-\addcontentsline{faq}{questions}{#1} % Adds the question to the list of questions
-\todo[inline, color=green!40]{\textbf{#1}} % Uses the todonotes package to create a fancy box to put the question
-\vspace{1em} % White space after the question before the start of the answer
-}
-
-% Uncomment the line below to get rid of the trailing dots in the table of contents
-%\renewcommand{\cftdot}{}
-
-% Uncomment the two lines below to get rid of the numbers in the table of contents
-%\let\Contentsline\contentsline
-%\renewcommand\contentsline[3]{\Contentsline{#1}{#2}{}}
 
 
 \newenvironment{tightcenter}{%
@@ -61,13 +40,13 @@
 }
 
 \newcommand{\itemcard}[4]{
-\begin{tightcenter}\subsection*{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
+\begin{tightcenter}\subsection{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
 \begin{bf}#3\end{bf}\end{tightcenter}
 { \parskip5pt #4  }
 }
 
 \newcommand{\event}[4]{
-\begin{tightcenter}\subsection*{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
+\begin{tightcenter}\subsection{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
 \begin{bf}#3\end{bf}\end{tightcenter}
 { \parskip5pt #4  }
 }
@@ -104,9 +83,10 @@ Mache nun einen Spukwurf (Haunt).}
 \newcommand{\itemcardd}{\emph{Item}-Karte}
 \newcommand{\eventcard}{\emph{Event}-Karte}
 \newcommand{\omencard}{\emph{Omen}-Karte}
+\newcommand{\omencards}{\emph{Omen}-Karten}
 
 
-\newcommand{\nootherweapon}{Du kannst keine andere Waffe verwenden, während du diese benutzt.}
+\newcommand{\nootherweapon}{Du kannst keine andere Waffe verwenden, währ\-end du diese benutzt.}
 
 \newcommand{\haunt}{Spuk (Haunt)}
 
@@ -124,14 +104,76 @@ Mache nun einen Spukwurf (Haunt).}
 \newcommand{\omencantbedts}{Dieses Omen kann nicht fallen gelassen, gehandelt oder gestohlen werden.}
 
 
+\newcommand{\room}[2]{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
+
+\newcommand{\iroom}[2]{\item \room{#1}{#2}}
+
 \begin{document}
 
-
+\tableofcontents
 
 \input{secretsofsurvival/01-themummywalks}
 
+\pagebreak
+
+%\twocolumn
+\section{Rooms / Räume}
+
+
+\begin{itemize}
+    \parskip-4pt
+    \iroom{Abandoned Room}{Stillgelegter Raum}
+    \iroom{Attic}{Dachboden}
+    \iroom{Balcony}{Balkon}
+    \iroom{Ballroom}{Ballzimmer.}
+    \iroom{Basement Landing}{Landeplatz im Keller (Kohleschütte)}
+    \iroom{Bedroom}{Schlafzimmer}
+    \iroom{Bloody Room}{Blutiges Zimmer}
+    \iroom{Catacombs}{Katakomben}
+    \iroom{Chapel}{Kapelle}
+    \iroom{Charred Room}{verbrannter Raum}
+    \iroom{Chasm}{Kluft}
+    \iroom{Coal Chute}{Kohleschacht}
+    \iroom{Collapsed Room}{Eingestürztes Zimmer}
+    \iroom{Conservatory}{Wintergarten}
+    \iroom{Creaky Hallway}{Knarrender Hausflur}
+    \iroom{Crypt}{Crypta}
+    \iroom{Dining Room}{Speisesaal}
+    \iroom{Dusty Hallway}{Verstaubter Hausflur}
+    \iroom{Furnace Room}{Ofenraum}
+    \iroom{Gallery}{Gallerie}
+    \iroom{Game Room}{Spielzimmer}
+    \iroom{Gardens}{Gärten}
+    \iroom{Graveyard}{Friedhof}
+    \iroom{Gymnasium}{Turnraum}
+    \iroom{Junk Room}{Gerümpelzimmer}
+    \iroom{Kitchen}{Küche}
+    \iroom{Larder}{Lagerraum}
+    \iroom{Library}{Bibliothek}
+    \iroom{Master Bedroom}{Herrenschlafzimmer}
+    \iroom{Mystic Elevator}{Mystischer Aufzug}
+    \iroom{Operating Laboratory}{Operationssaal}
+    \iroom{Organ Room}{Orgelzimmer}
+    \iroom{Patio}{Patio, Innenhof}
+    \iroom{Pentagram Camber}{Pentagramkammer}
+    \iroom{Research Laboratory}{Forschungslabor.}
+    \iroom{Servants' Quarters}{Quatier des Dieners}
+    \iroom{Stairs From Basement}{Kellertreppe}
+    \iroom{Statuary Corridor}{Bildhauerkorridor}
+    \iroom{Storeroom}{Abstellraum}
+    \iroom{Tower}{Turm}
+    \iroom{Underground Lake}{Untergrundsee}
+    \iroom{Upper Landing}{Oberer Treppenabsatz}
+    \iroom{Vault}{Tresorraum}
+    \iroom{Wine Cellar}{Weinkeller}
+\end{itemize}
+
+
+
+\input{rooms}
+
 \twocolumn
-\section{Events}
+\section{Events / Ereignisse}
 
 \input{events/amomentofhope}
 
