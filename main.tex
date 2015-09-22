@@ -28,6 +28,7 @@
 %\usepackage{palatino} % Use the Palatino font
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\usepackage{ifthen}
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
@@ -56,8 +57,8 @@
 
 \newcommand{\itemcard}[4]{
     \begin{absolutelynopagebreak}
+    \subsection[#1]{\centering \uppercaseEngGer{#1}{#2}}
     \begin{tightcenter}
-        \subsection[#1]{\uppercaseEngGer{#1}{#2}}
         \begin{bf}#3\end{bf}
     \end{tightcenter}
     { \parskip5pt #4  }
@@ -66,8 +67,8 @@
 
 \newcommand{\event}[4]{
     \begin{absolutelynopagebreak}
+    \subsection[#1]{\centering \uppercaseEngGer{#1}{#2}}
     \begin{tightcenter}
-        \subsection[#1]{\uppercaseEngGer{#1}{#2}}
         \begin{bf}#3\end{bf}
     \end{tightcenter}
     { \parskip5pt #4  }
@@ -76,8 +77,8 @@
 
 \newcommand{\omen}[4]{
     \begin{absolutelynopagebreak}
+    \subsection[#1]{\centering \uppercaseEngGer{#1}{#2}}
     \begin{tightcenter}
-        \subsection[#1]{\uppercaseEngGer{#1}{#2}}
         \begin{bf}#3\end{bf}
     \end{tightcenter}
     { \parskip5pt #4
@@ -156,17 +157,28 @@
 \newcommand{\haunttitle}[2]{\pagebreak\subsection[#1]{\Uppercase{#1} \newline \Uppercase{#2}}}
 
 
-\newcommand{\introduction}[1]{\emph{#1}}
-\newcommand{\outro}[1]{\vspace{5pt}\emph{#1}}
+\newcommand{\introduction}[1]{ {\itshape #1 } }
+\newcommand{\outro}[1]{\vspace{5pt} {\itshape #1 }}
 
 \newcommand{\rightnow}[1]{\subsubsection*{Was ihr jetzt tun müsst} #1}
 \newcommand{\specialattackrules}[1]{\subsubsection*{Spezielle Angriffsregeln} #1}
 \newcommand{\whatyouknowaboutthebadguys}[1]{\subsubsection*{Was ihr über die bösen Jungs wisst} #1}
+\newcommand{\whatyouknowabouttheheros}[1]{\subsubsection*{Was du über die Helden weißt} #1}
 \newcommand{\youwhinwhen}[1]{\subsubsection*{Ihr gewinnt, wenn ...} #1}
 
 \newcommand{\hauntsection}[1]{\subsubsection*{#1}}
 
 \newcommand{\bitem}{\item}
+
+\newcommand{\monster}[5]{\subsubsection*{\centering #1}
+\begin{center}
+\ifthenelse{\equal{#2}{}}{}{\textbf{Speed}: #2 \hspace{6pt}}%
+\ifthenelse{\equal{#3}{}}{}{\textbf {Might}: #3 \hspace{6pt}}%
+\ifthenelse{\equal{#4}{}}{}{\textbf {Sanity}: #4 \hspace{6pt}}%
+\ifthenelse{\equal{#5}{}}{}{\textbf {Knowledge}: #5 }%
+\end{center}
+
+}
 
 %%%%%%%%%%%%%%%%%%% Silbentrennung %%%%%%%%
 
@@ -258,7 +270,8 @@
 \input{secretsofsurvival/49-youwearitwell}
 \input{secretsofsurvival/50-treasurehunt}
 
-
+\pagebreak
+\pagebreak
 \section{Traitors Tome / Der Wälzer des Verräters }
 
 \input{traitorstome/01-themummywalks}
