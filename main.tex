@@ -14,23 +14,35 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[10pt,a4paper,oneside,ngerman]{article}
+\documentclass[11pt,a4paper,oneside,ngerman]{article}
 
 \usepackage[ngerman]{babel}
 \usepackage{color}
 
-\usepackage[margin=1in]{geometry} % Required to make the margins smaller to fit more content on each page
+\usepackage[margin=1cm]{geometry} % Required to make the margins smaller to fit more content on each page
+\usepackage[compact]{titlesec}
 %\usepackage[linkcolor=blue]{hyperref} % Required to create hyperlinks to questions from elsewhere in the document
 %\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue} % Specify a color for hyperlinks
 %\usepackage{todonotes} % Required for the boxes that questions appear in
 %\usepackage{tocloft} % Required to give customize the table of contents to display questions
 \usepackage{microtype} % Slightly tweak font spacing for aesthetics
-%\usepackage{palatino} % Use the Palatino font
+%\usepackage{bookman}
+\usepackage{palatino} % Use the Palatino font
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{ifthen}
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
+
+%% für A5
+%\setlength{\hoffset}{-15mm}
+%\setlength{\voffset}{-15mm}
+\setlength{\headsep}{2mm}
+\setlength{\topmargin}{-65pt}
+%\setlength{\textwidth}{13cm}
+%\setlength{\textheight}{19.7cm}
+\setlength{\footskip}{8mm}
+
 
 \definecolor{titlecolor}{rgb}{1.0,0.2,0.1}      % hellgruener Rahmen
 
@@ -120,7 +132,9 @@
 \newcommand{\knowroll}{\emph{Knowledge}-Wurf}
 
 \newcommand{\chip}[2]{\emph{#1}-Chip (#2)}
+\newcommand{\chips}[2]{\emph{#1}-Chips (#2)}
 \newcommand{\chipe}[1]{\emph{#1}-Chip}
+\newcommand{\chipse}[1]{\emph{#1}-Chips}
 
 \newcommand{\itemcards}{\emph{Item}-Karten}
 \newcommand{\itemcardd}{\emph{Item}-Karte}
@@ -154,17 +168,19 @@
 
 %%%%%%%%%%%%%%%%%%% Haut explanaiton macros %%%%%%%%
 
-\newcommand{\haunttitle}[2]{\pagebreak\subsection[#1]{\Uppercase{#1} \newline \Uppercase{#2}}}
+\newcommand{\haunttitle}[2]{\cleardoublepage\subsection[#1]{\Uppercase{#1} \newline \Uppercase{#2}}}
 
 
 \newcommand{\introduction}[1]{ {\itshape #1 } }
-\newcommand{\outro}[1]{\vspace{5pt} {\itshape #1 }}
+\newcommand{\outro}[1]{\subsubsection*{Wenn du gewinnst ...} {\itshape #1 }}
 
 \newcommand{\rightnow}[1]{\subsubsection*{Was ihr jetzt tun müsst} #1}
 \newcommand{\specialattackrules}[1]{\subsubsection*{Spezielle Angriffsregeln} #1}
 \newcommand{\whatyouknowaboutthebadguys}[1]{\subsubsection*{Was ihr über die bösen Jungs wisst} #1}
 \newcommand{\whatyouknowabouttheheros}[1]{\subsubsection*{Was du über die Helden weißt} #1}
-\newcommand{\youwhinwhen}[1]{\subsubsection*{Ihr gewinnt, wenn ...} #1}
+\newcommand{\youwinwhen}[1]{\subsubsection*{Ihr gewinnt, wenn ...} #1}
+\newcommand{\youwhinwhen}[1]{\youwinwhen{#1}}
+\newcommand{\Tyouwinwhen}[1]{\subsubsection*{Du gewinnst, wenn ...} #1}
 
 \newcommand{\hauntsection}[1]{\subsubsection*{#1}}
 
@@ -187,9 +203,11 @@
 
 
 %%%%%%%%%%%%%%%%%%% DOKUMENT %%%%%%%%
-
+\usepackage{layout}
 
 \begin{document}
+
+\layout{}
 
 \tableofcontents
 
@@ -219,6 +237,9 @@
 
 \onecolumn
 \section{Secrets Of Survival / Geheimnisse fürs Überleben }
+ERST LESEN, WENN DER SPUK OFFENBART WURDE!
+\twocolumn
+
 \input{secretsofsurvival/01-themummywalks}
 \input{secretsofsurvival/02-theseance}
 \input{secretsofsurvival/03-froglegstew}
@@ -272,7 +293,11 @@
 
 \pagebreak
 \pagebreak
+\onecolumn
+
 \section{Traitors Tome / Der Wälzer des Verräters }
+ERST LESEN, WENN DER SPUK OFFENBART WURDE!
+\twocolumn
 
 \input{traitorstome/01-themummywalks}
 \input{traitorstome/02-theseance}
