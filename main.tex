@@ -21,7 +21,7 @@
 
 \usepackage[margin=1cm]{geometry} % Required to make the margins smaller to fit more content on each page
 \usepackage[compact]{titlesec}
-%\usepackage[linkcolor=blue]{hyperref} % Required to create hyperlinks to questions from elsewhere in the document
+\usepackage[linkcolor=black,pdfborder={0 0 0}]{hyperref} % Required to create hyperlinks to questions from elsewhere in the document
 %\hypersetup{pdfborder={0 0 0}, colorlinks=true, urlcolor=blue} % Specify a color for hyperlinks
 %\usepackage{todonotes} % Required for the boxes that questions appear in
 %\usepackage{tocloft} % Required to give customize the table of contents to display questions
@@ -31,6 +31,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{ifthen}
+\usepackage{graphicx}
+\usepackage{multicol}
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
@@ -207,7 +209,7 @@
 
 \begin{document}
 
-\layout{}
+\input{TITLE}
 
 \tableofcontents
 
@@ -222,17 +224,17 @@
 \twocolumn
 
 \section{Events / Ereignisse}
-\input{EVENTS}
+\input{cards/EVENTS}
 
 \pagebreak
 
 \section{Omen}
-\input{OMEN}
+\input{cards/OMEN}
 
 \pagebreak
 
 \section{Items / Gegenstände}
-\input{ITEMS}
+\input{cards/ITEMS}
 
 
 \onecolumn
