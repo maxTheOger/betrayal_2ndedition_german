@@ -33,6 +33,8 @@
 \usepackage{ifthen}
 \usepackage{graphicx}
 \usepackage{multicol}
+\usepackage{lscape}
+\usepackage[table]{xcolor}    % loads also »colortbl«
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
@@ -163,9 +165,9 @@
 \newcommand{\omencantbedts}{Dieses Omen kann nicht fallen gelassen, gehandelt oder gestohlen werden.}
 
 
-\newcommand{\room}[2]{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}}
+\newcommand{\room}[2]{\expandafter\MakeUppercase\expandafter{#1} / \expandafter\MakeUppercase\expandafter{#2}  }
 
-\newcommand{\iroom}[2]{\item \room{#1}{#2}}
+\newcommand{\iroom}[3]{\item \room{#1}{#2} \ifthenelse{\equal{#3}{}}{}{ \newline #3 } }
 
 
 %%%%%%%%%%%%%%%%%%% Haut explanaiton macros %%%%%%%%
@@ -174,9 +176,11 @@
 
 
 \newcommand{\introduction}[1]{ {\itshape #1 } }
-\newcommand{\outro}[1]{\subsubsection*{Wenn du gewinnst ...} {\itshape #1 }}
+\newcommand{\outro}[1]{\subsubsection*{Wenn ihr gewinnt ...} {\itshape #1 }}
+\newcommand{\Toutro}[1]{\subsubsection*{Wenn du gewinnst ...} {\itshape #1 }}
 
 \newcommand{\rightnow}[1]{\subsubsection*{Was ihr jetzt tun müsst} #1}
+\newcommand{\Trightnow}[1]{\subsubsection*{Was du jetzt tun musst} #1}
 \newcommand{\specialattackrules}[1]{\subsubsection*{Spezielle Angriffsregeln} #1}
 \newcommand{\whatyouknowaboutthebadguys}[1]{\subsubsection*{Was ihr über die bösen Jungs wisst} #1}
 \newcommand{\whatyouknowabouttheheros}[1]{\subsubsection*{Was du über die Helden weißt} #1}
@@ -235,6 +239,9 @@
 
 \section{Items / Gegenstände}
 \input{cards/ITEMS}
+
+\onecolumn
+\input{HAUNTCHART}
 
 
 \onecolumn

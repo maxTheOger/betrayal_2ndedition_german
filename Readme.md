@@ -19,7 +19,7 @@ Alles zu schwer, du willst aber trotzdem etwas verbessern?
    Das eröffnet eine Diskussion über ein Problem. Vielleicht hat jemand für die Karte oder das Szenario ja schon was geschrieben?
  * Beschreibe den Fehler, den Ort des Vorkommens, den Verbesserungsvorschlag und erstelle die Diskussion ('Submit new issue').
 
-Willst du dich auf eine Karte beziehen oder Text kopieren oder die Verbesserung direkt im richtigen Layout vorschlagen, schau dir die Dateien EVENTS.tex, OMEN.tex, ROOMS.tex, sprachkodex.tex und die Dateien in den Ordnern secretsofsurvival/ und traitorstome/ an.
+Willst du dich auf eine Karte beziehen oder Text kopieren oder die Verbesserung direkt im richtigen Layout vorschlagen, schau dir die Dateien cards/EVENTS.tex, cards/OMEN.tex, cards/ITEMS.tex, ROOMS.tex, sprachkodex.tex und die Dateien in den Ordnern secretsofsurvival/ und traitorstome/ an.
 
 
 # Todo
