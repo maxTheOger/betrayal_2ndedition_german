@@ -35,6 +35,11 @@
 \usepackage{multicol}
 \usepackage{lscape}
 \usepackage[table]{xcolor}    % loads also »colortbl«
+\usepackage[absolute]{textpos}
+\usepackage{calc}
+\usepackage{fancyhdr}
+\usepackage{layout}
+\usepackage[abs]{overpic}
 
 \setlength\parindent{0pt} % Removes all indentation from paragraphs
 
@@ -44,8 +49,9 @@
 \setlength{\headsep}{2mm}
 \setlength{\topmargin}{-65pt}
 %\setlength{\textwidth}{13cm}
-%\setlength{\textheight}{19.7cm}
-\setlength{\footskip}{8mm}
+\addtolength{\textheight}{-5mm}
+\setlength{\footskip}{12mm}
+
 
 
 \definecolor{titlecolor}{rgb}{1.0,0.2,0.1}      % hellgruener Rahmen
@@ -174,6 +180,15 @@
 
 \newcommand{\haunttitle}[2]{\cleardoublepage\subsection[#1]{\Uppercase{#1} \newline \Uppercase{#2}}}
 
+\newcommand{\survival}[4]{\haunttitle{#2}{#3}
+    \setcounter{haunt}{#1}
+    \thispagestyle{survivalps}
+}
+
+\newcommand{\traitor}[4]{\haunttitle{#2}{#3}
+    \setcounter{haunt}{#1}
+    \thispagestyle{traitorps}
+}
 
 \newcommand{\introduction}[1]{ {\itshape #1 } }
 \newcommand{\outro}[1]{\subsubsection*{Wenn ihr gewinnt ...} {\itshape #1 }}
@@ -206,11 +221,48 @@
 
 \hyphenation{Pen-ta-gramm}
 
+\newcounter{haunt}
 
+
+\fancypagestyle{survivalps}{%
+    \fancyhf{}
+    % Clear the header and footer
+    \fancyhead{}
+    \fancyfoot{}
+    % Set the right side of the footer to be the page number
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[R]{\thepage}
+    \fancyfoot[C]{\centering
+        \begin{overpic}[scale=1,unit=1mm]{resources/sos_footer}
+            \put(24.5,2.4){\LARGE \makebox[40pt]{\centering \thehaunt}}
+        \end{overpic}
+    }
+}
+
+\fancypagestyle{traitorps}{%
+    \fancyhf{}
+    % Clear the header and footer
+    \fancyhead{}
+    \fancyfoot{}
+    % Set the right side of the footer to be the page number
+    \renewcommand{\headrulewidth}{0pt}
+    \fancyfoot[R]{\thepage}
+    \fancyfoot[C]{
+    \begin{overpic}[scale=1,unit=1mm]{resources/tr_footer}
+        \put(16,1.4){\LARGE \makebox[40pt]{\centering \thehaunt}}
+    \end{overpic}
+    }
+}
+
+\fancypagestyle{default}{%
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \fancyfoot[R]{\thepage}
+}
+
+\pagestyle{default}
 
 %%%%%%%%%%%%%%%%%%% DOKUMENT %%%%%%%%
-\usepackage{layout}
-
 \begin{document}
 
 \input{TITLE}
