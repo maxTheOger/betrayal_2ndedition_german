@@ -16,6 +16,8 @@
 
 \documentclass[11pt,a4paper,oneside,ngerman]{article}
 
+\overfullrule=1mm
+
 \usepackage[ngerman]{babel}
 \usepackage{color}
 
@@ -220,6 +222,15 @@
 %%%%%%%%%%%%%%%%%%% Silbentrennung %%%%%%%%
 
 \hyphenation{Pen-ta-gramm}
+\hyphenation{nimm-st}
+\hyphenation{kann-st}
+\hyphenation{Frö-sche}
+\hyphenation{Zim-mer}
+\hyphenation{be-in-hal-tet}
+\hyphenation{Wür-fel-wurf}
+
+
+
 
 \newcounter{haunt}
 
@@ -265,16 +276,21 @@
 %%%%%%%%%%%%%%%%%%% DOKUMENT %%%%%%%%
 \begin{document}
 
+
+
 \input{TITLE}
 
 \tableofcontents
+
 
 
 \pagebreak
 
 \section{Regeln}
 \setlength\parskip{7pt}
+\begin{flushleft}
 \input{RULES}
+\end{flushleft}
 \setlength\parskip{0pt}
 
 \pagebreak
