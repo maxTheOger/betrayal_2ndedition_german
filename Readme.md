@@ -8,6 +8,7 @@ Deutsche Übersetzung von Betrayal at House on the Hill 2nd Edition.
 
 Lade die Datei [main.pdf](https://github.com/maxTheOger/betrayal_2ndedition_german/raw/master/main.pdf) herunter.
 
+Letzte Änderung: 30. November 2016
 
 # Beitragen
 
